@@ -1,0 +1,461 @@
+/* =========================================
+   ESTILOS GENERALES DE LA PÁGINA
+========================================= */
+
+/* =========================================
+   IMPORTACIÓN DE FUENTES EXTERNAS
+========================================= */
+
+/* Importación de la fuente general Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================================
+   FUENTE DE ENCABEZADOS - EXPOSE (LOCAL)
+========================================= */
+
+/* Declaración de la fuente Expose desde la carpeta local de fuentes del proyecto.
+   Los archivos .woff2 están disponibles en:
+   Archivos Info\Expose_Complete\Expose_Complete\Fonts\WEB\fonts\
+   (copiar a la carpeta ./fonts/ del proyecto) */
+
+/* Peso regular (400) */
+@font-face {
+  font-family: 'Expose';
+  src: url('./fonts/Expose-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Peso medium (500) */
+@font-face {
+  font-family: 'Expose';
+  src: url('./fonts/Expose-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Peso bold (700) */
+@font-face {
+  font-family: 'Expose';
+  src: url('./fonts/Expose-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Peso black (900) - utilizado por los encabezados H2 */
+@font-face {
+  font-family: 'Expose';
+  src: url('./fonts/Expose-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================
+   VARIABLES GLOBALES (:root)
+========================================= */
+
+/* Paleta de colores, tipografías y tamaños globales de la web */
+:root {
+  /* ---- Paleta de colores ---- */
+  --color-fondo: #FFFFFF;
+  /* Fondo general de la web */
+  --color-primario: #0B1F3A;
+  /* Azul marino principal */
+  --color-secundario: #13315C;
+  /* Azul secundario */
+  --color-texto-normal: #E6E6E6;
+  /* Texto normal sobre fondos oscuros */
+  --color-texto-primario: #0F1720;
+  /* Texto principal sobre fondos claros */
+  --color-accent: #F04E23;
+  /* Naranja accent */
+  --color-accent-hover: #D63E17;
+  /* Naranja accent en hover */
+  --color-fondo-cards: #F5F3F6;
+  /* Fondo de las tarjetas */
+  --color-accent-suave: rgba(240, 78, 35, 0.05);
+  /* Accent al 5% de opacidad */
+  --color-texto-parrafo: rgba(19, 49, 92, 0.7);
+  /* Secundario al 70% de opacidad */
+
+  /* ---- Tipografías ---- */
+  --fuente-encabezados: 'Expose', sans-serif;
+  /* Encabezados */
+  --fuente-general: 'Inter', sans-serif;
+  /* Todo lo demás */
+
+  /* ---- Tamaños de texto ---- */
+  --tamano-h1: 5.5rem;
+  --tamano-h2: 3.5rem;
+  --tamano-h3: 2rem;
+  --tamano-h4: 32px;
+  --tamano-texto-normal: 16px;
+  --tamano-texto-grande: 18px;
+}
+
+/* =========================================
+   RESET Y ESTILOS BASE
+========================================= */
+
+/* Reset básico de márgenes, paddings y modelo de caja */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset básico y estilos base del body */
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--fuente-general);
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-primario);
+  background-color: var(--color-fondo);
+}
+
+body::selection {
+  background-color: rgba(240, 78, 35, 0.4);
+}
+
+/* =========================================
+   TIPOGRAFÍA - JERARQUÍA DE ENCABEZADOS
+========================================= */
+
+/* Estilos comunes de todos los encabezados */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-encabezados);
+  color: var(--color-primario);
+}
+
+/* Estilos del H1 (el tamaño puede variar según la página) */
+h1 {
+  font-size: var(--tamano-h1);
+  font-weight: 900;
+  line-height: 75%;
+}
+
+/* Estilos del H2: color primario, en "black", 85% de altura de línea
+   y -1.8px de espaciado de letras */
+h2 {
+  font-size: var(--tamano-h2);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+/* Estilos del H3 */
+h3 {
+  font-size: var(--tamano-h3);
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+/* Estilos del H4 */
+h4 {
+  font-size: var(--tamano-h4);
+}
+
+/* Estilos de los párrafos en general: color secundario al 70% de opacidad */
+p {
+  font-family: var(--fuente-general);
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+}
+
+/* Estilos del texto grande */
+.texto-grande {
+  font-family: var(--fuente-general);
+  font-size: var(--tamano-texto-grande);
+}
+
+/* Clase para destacar palabras clave con el color de acento (Accent) */
+.destacado {
+  color: var(--color-accent);
+}
+
+/* =========================================
+   COMPONENTES - BOTONES
+========================================= */
+
+/* Estilos base comunes a los 4 tipos de botones */
+.boton-principal,
+.boton-secundario,
+.boton-terciario,
+.boton-principal-azul {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-family: var(--fuente-general);
+  font-weight: 900;
+  font-size: var(--tamano-texto-normal);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Botón 1 - Btn Principal Naranja*/
+.boton-principal {
+  color: var(--color-primario);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent-hover);
+  box-shadow: 0 0 10px var(--color-accent-hover);
+}
+
+/* Botón 2 - Btn Secundario Naranja: igual que el principal pero sin fondo */
+.boton-secundario {
+  color: var(--color-primario);
+  background-color: transparent;
+  border: 1px solid var(--color-accent-hover);
+  box-shadow: 0 0 10px var(--color-accent-hover);
+}
+
+/* Botón 3 - Btn Terciario Naranja*/
+.boton-terciario {
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent-hover);
+  box-shadow: 0 0 10px var(--color-accent-hover);
+}
+
+/* Botón 4 - Btn Principal Azul Marino*/
+.boton-principal-azul {
+  color: #FFFFFF;
+  background-color: var(--color-primario);
+  border: 1px solid var(--color-secundario);
+  box-shadow: 0 0 10px var(--color-secundario);
+}
+
+/* Efecto hover común para todos los botones: escala ligera y rotación */
+.boton-principal:hover,
+.boton-secundario:hover,
+.boton-terciario:hover,
+.boton-principal-azul:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* =========================================
+   COMPONENTES DECORATIVOS
+========================================= */
+
+/* Componente Destello Naranja - Glow radial difuminado de fondo */
+.destello-naranja {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(240, 78, 35, 0.55) 0%, rgba(240, 78, 35, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  /* Se posiciona por detrás del contenido */
+}
+
+/* =========================================
+   CABECERA - MENÚ DE NAVEGACIÓN
+========================================= */
+
+/* Estilos del contenedor general de la cabecera: ocupa el 80% de la pantalla,
+   está centrado horizontalmente y flota por encima del hero (posición absoluta),
+   de modo que el degradado del hero arranca desde el píxel 0 de la pantalla */
+.cabecera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 2% auto 0;
+  padding: 1% 2%;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  z-index: 100;
+}
+
+/* Estilos de la barra de navegación interna */
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Estilos del contenedor enlazado del logo de la marca */
+.enlace-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Estilos de la imagen del logo de la marca: altura de 35px para encajar con el navbar y border-radius a 20px */
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Estilos del menú de navegación */
+.menu-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+/* Estilos de cada ítem del menú */
+
+/* Estilos de los enlaces del menú: color blanco */
+.enlace-menu {
+  color: #FFFFFF;
+  font-family: var(--fuente-general);
+  font-weight: 600;
+  font-size: var(--tamano-texto-normal);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Estilos de los enlaces del menú al pasar el ratón */
+.enlace-menu:hover {
+  color: var(--color-accent);
+}
+
+/* =========================================
+   MENÚ DESPLEGABLE (SERVICIOS)
+========================================= */
+
+.item-menu-desplegable {
+  position: relative;
+}
+
+.icono-desplegable {
+  font-size: 0.85em;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item-menu-desplegable:hover .icono-desplegable {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.submenu-servicios {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  opacity: 0;
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--color-secundario);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 200;
+  margin-top: 8px;
+}
+
+/* Área de tolerancia hover para evitar que se cierre al desplazar el cursor */
+.submenu-servicios::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+
+.item-menu-desplegable:hover .submenu-servicios {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.item-submenu {
+  margin: 0;
+}
+
+.enlace-submenu {
+  display: block;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  font-family: var(--fuente-general);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.enlace-submenu:hover {
+  background-color: rgba(240, 78, 35, 0.15);
+  color: var(--color-accent);
+  padding-left: 24px;
+}
+
+/* Estilos del botón CTA naranja de la cabecera (Llamar ahora) */
+.boton-llamar-cabecera {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-family: var(--fuente-general);
+  font-weight: 900;
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-primario);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent-hover);
+  box-shadow: 0 0 10px var(--color-accent-hover);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos del botón de la cabecera al pasar el ratón */
+.boton-llamar-cabecera:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   RESPONSIVE - CABECERA
+========================================= */
+
+/* Ajustes del menú en pantallas medianas y pequeñas */
+@media (max-width: 1024px) {
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .cabecera {
+    padding: 1.5% 3%;
+  }
+}

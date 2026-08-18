@@ -1,0 +1,56 @@
+/;VOLUMEN;;
+cerrajero sevilla;5000;;
+cerrajero 24 horas sevilla;500;;
+cerrajero barato sevilla;50;;
+cerrajero económico sevilla;50;;
+cerrajero sevilla precio;50;;
+cerrajero sevilla capital;50;;
+Total;5700;;
+;;;
+;;/cerrajero-urgente-sevilla/;VOLUMEN
+;;cerrajero urgente sevilla;50
+;;cerrajero urgente;5000
+;;cerrajero de urgencia;5000
+;;cerrajero 24h;5000
+;;cerrajero rápido;500
+;;cerrajero urgente 24 horas;500
+;;cerrajero emergencia;500
+;;cerrajería urgente;500
+;;cerrajero urgente en sevilla;50
+;;cerrajero urgencias sevilla;50
+;;Total;17150
+;;;
+;;/cambio-cerraduras-sevilla/;VOLUMEN
+;;cambiar cerradura puerta;5000
+;;cambiar bombin puerta;5000
+;;cambio de cerradura sevilla;5
+;;cambio de cerradura;500
+;;cambio de cerradura precio;500
+;;cambiar cerradura puerta blindada;500
+;;cambiar cerradura puerta precio;500
+;;cambiar cerradura puerta exterior;500
+;;cambiar cerradura puerta metálica;500
+;;precio bombín cerradura;500
+;;bombin puerta blindada;500
+;;cambiar bombín cerradura sin llave;500
+;;Total;14505
+;;;
+;;/apertura-puertas-blindadas-sevilla/;VOLUMEN
+;;abrir puerta blindada sevilla;s/d
+;;apertura puerta acorazada;s/d
+;;precio abrir puerta blindada;s/d
+;;Total;0
+;;;
+;;/apertura-coches-sevilla/;VOLUMEN
+;;cerrajero coche sevilla;50
+;;cerrajero coche;500
+;;cerrajero de coches;500
+;;cerrajero auto;500
+;;cerrajero llaves coche;500
+;;cerrajeria del automovil;500
+;;cerrajeria automovil;500
+;;cerrajero para coches;50
+;;cerrajero para abrir coche;50
+;;apertura de coches;50
+;;cerrajero coche 24 horas;50
+;;Total;3250
