@@ -1,0 +1,18 @@
+# Ignorar todo por defecto
+*
+
+# Excepción para el propio .gitignore
+!.gitignore
+
+# Permitir que Git explore carpetas
+!*/
+
+# Archivos HTML y CSS
+!*.html
+!*.css
+
+# Carpetas img y fonts con todo su contenido
+!img/
+!img/**
+!fonts/
+!fonts/**
