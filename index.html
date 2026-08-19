@@ -46,11 +46,9 @@
           <a href="#servicios" class="enlace-menu">Servicios <i class="ri-arrow-down-s-line icono-desplegable"
               aria-hidden="true"></i></a>
           <ul class="submenu-servicios">
-            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Apertura de puertas</a></li>
-            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Cambio de cerraduras</a></li>
-            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Puertas blindadas</a></li>
-            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Apertura de vehículos</a></li>
-            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Asesoramiento de seguridad</a></li>
+            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Cerrajero Urgente en Sevilla</a></li>
+            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Cambio de Cerraduras</a></li>
+            <li class="item-submenu"><a href="#servicios" class="enlace-submenu">Aperturas de Coches</a></li>
           </ul>
         </li>
 
@@ -59,7 +57,8 @@
 
         <!-- Botón CTA dentro del menú a pantalla completa para versión móvil -->
         <li class="item-menu-cta-movil">
-          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line" aria-hidden="true"></i> Llamar ahora</a>
+          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line"
+              aria-hidden="true"></i> Llamar ahora</a>
         </li>
       </ul>
       <a href="tel:+34600000000" class="boton-llamar-cabecera">Llamar ahora</a>
@@ -712,9 +711,12 @@
         <!-- Fila 1: Encabezado a la izquierda y párrafo a la derecha -->
         <div class="fila-cta-superior">
           <h2 class="h2-cta-final">Resuelve tu problema ahora: llama o pide presupuesto</h2>
-          <p class="texto-cta-final">Cuéntanos qué ha pasado y dónde estás. En la misma llamada te confirmamos la hora de
-            llegada y un precio orientativo, para que sepas exactamente a qué atenerte antes de que el técnico se ponga en
-            marcha. Si prefieres no llamar todavía, pide presupuesto y te respondemos con el precio cerrado según tu caso.
+          <p class="texto-cta-final">Cuéntanos qué ha pasado y dónde estás. En la misma llamada te confirmamos la hora
+            de
+            llegada y un precio orientativo, para que sepas exactamente a qué atenerte antes de que el técnico se ponga
+            en
+            marcha. Si prefieres no llamar todavía, pide presupuesto y te respondemos con el precio cerrado según tu
+            caso.
           </p>
         </div>
 
@@ -737,28 +739,101 @@
   <!-- ================= FOOTER ================= -->
   <footer class="pie-pagina">
     <div class="contenido-pie-pagina">
-      <p class="nombre-pie-pagina">Apertura Express Sevilla</p>
-      <nav class="navegacion-pie-pagina">
-        <ul class="menu-pie-pagina">
-          <li class="item-menu-pie"><a href="#inicio" class="enlace-pie-pagina">Inicio</a></li>
-          <li class="item-menu-pie"><a href="#servicios" class="enlace-pie-pagina">Servicios</a></li>
-          <li class="item-menu-pie"><a href="#precios" class="enlace-pie-pagina">Precios</a></li>
-          <li class="item-menu-pie"><a href="#cobertura" class="enlace-pie-pagina">Zona</a></li>
-          <li class="item-menu-pie"><a href="#faq" class="enlace-pie-pagina">FAQ</a></li>
-          <li class="item-menu-pie"><a href="#contacto" class="enlace-pie-pagina">Contacto</a></li>
-        </ul>
-      </nav>
-      <p class="contacto-pie-pagina">
-        <!-- Reemplazar +34600000000 por el teléfono real -->
-        <a href="tel:+34600000000" class="telefono-pie-pagina"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
-          ahora</a>
-        <!-- Reemplazar el enlace de WhatsApp por el número real -->
-        <a href="https://wa.me/34600000000" class="whatsapp-pie-pagina"><i class="ri-whatsapp-line"
-            aria-hidden="true"></i> WhatsApp</a>
-      </p>
-      <p class="copyright-pie-pagina">© 2026 Apertura Express Sevilla. Todos los derechos reservados.</p>
+
+      <!-- Bloque superior del footer: 4 columnas en flex -->
+      <div class="grid-pie-pagina">
+
+        <!-- Columna 1: Marca y descripción -->
+        <div class="columna-pie-pagina columna-marca-pie">
+          <a href="#inicio" class="enlace-logo-pie">
+            <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla"
+              class="logo-pie">
+          </a>
+          <p class="descripcion-pie-pagina">Cerrajero local en Sevilla especializado en urgencias 24 horas a domicilio.
+            Aperturas limpias sin daños, cambio de cerraduras de alta seguridad y precio cerrado antes de empezar.</p>
+          <div class="badge-tiempo-pie">
+            <i class="ri-time-line" aria-hidden="true"></i>
+            <span>Llegada estimada en <strong class="destacado">20–30 min</strong></span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Navegación</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="#inicio" class="enlace-pie">Inicio</a></li>
+            <li><a href="#servicios" class="enlace-pie">Servicios</a></li>
+            <li><a href="#precios" class="enlace-pie">Tarifas y Precios</a></li>
+            <li><a href="#cobertura" class="enlace-pie">Zona de cobertura</a></li>
+            <li><a href="#sobre-nosotros" class="enlace-pie">¿Por qué elegirnos?</a></li>
+            <li><a href="#faq" class="enlace-pie">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios principales -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Servicios 24H</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="#servicios" class="enlace-pie">Apertura de puertas sin daños</a></li>
+            <li><a href="#servicios" class="enlace-pie">Cambio de cerraduras</a></li>
+            <li><a href="#servicios" class="enlace-pie">Puertas blindadas y acorazadas</a></li>
+            <li><a href="#servicios" class="enlace-pie">Apertura de vehículos</a></li>
+            <li><a href="#servicios" class="enlace-pie">Asesoramiento de seguridad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto urgente -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Contacto Urgente</h4>
+          <div class="bloque-contacto-pie">
+            <!-- Reemplazar +34600000000 por el teléfono real -->
+            <a href="tel:+34600000000" class="boton-contacto-pie boton-telefono-pie">
+              <i class="ri-phone-fill" aria-hidden="true"></i>
+              <span>Llamar ahora</span>
+            </a>
+            <!-- Reemplazar por enlace de WhatsApp real -->
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer"
+              class="boton-contacto-pie boton-whatsapp-pie">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i>
+              <span>WhatsApp Directo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fila inferior del footer: Legales, Copyright y Créditos -->
+      <div class="barrita-inferior-pie">
+        <div class="legales-pie">
+          <a href="#" class="enlace-legal-pie">Aviso legal</a>
+          <span class="separador-pie">•</span>
+          <a href="#" class="enlace-legal-pie">Política de privacidad</a>
+          <span class="separador-pie">•</span>
+          <a href="#" class="enlace-legal-pie">Política de cookies</a>
+        </div>
+        <p class="copyright-pie">© 2026 Apertura Express Sevilla. Todos los derechos reservados.</p>
+        <p class="creditos-pie">
+          Desarrollado por <a href="https://rubiqstudio.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="enlace-creditos-pie">RubiqStudio</a>
+        </p>
+      </div>
+
     </div>
   </footer>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6a856d66d389c634455a8853/1k0cj6m57';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 </body>
 

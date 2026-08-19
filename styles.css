@@ -200,8 +200,8 @@ p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 20px 30px;
-  border-radius: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
   font-family: var(--fuente-general);
   font-weight: 900;
   font-size: var(--tamano-texto-normal);
@@ -283,7 +283,7 @@ p {
   margin: 2% auto 0;
   padding: 1% 2%;
   background-color: var(--color-primario);
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 100;
 }
 
@@ -306,7 +306,7 @@ p {
 .logo {
   height: 50px;
   width: auto;
-  border-radius: 20px;
+  border-radius: 15px;
   object-fit: contain;
   display: block;
 }
@@ -373,7 +373,7 @@ p {
   min-width: 250px;
   background-color: var(--color-secundario);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
+  border-radius: 6px;
   padding: 10px 0;
   list-style: none;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
@@ -425,8 +425,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
-  border-radius: 20px;
+  padding: 11px 23px;
+  border-radius: 8px;
   font-family: var(--fuente-general);
   font-weight: 900;
   font-size: var(--tamano-texto-normal);
@@ -486,6 +486,240 @@ p {
 }
 
 /* =========================================
+   PIE DE PÁGINA (FOOTER)
+========================================= */
+
+/* Estilos del contenedor general del pie de página */
+.pie-pagina {
+  width: 100%;
+  background-color: var(--color-primario);
+  color: #FFFFFF;
+  padding: 4% 6% 2%;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Contenedor del contenido interno del footer */
+.contenido-pie-pagina {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Grid superior de 4 columnas en flex */
+.grid-pie-pagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* Columna individual del footer */
+.columna-pie-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+/* Marca y descripción de la empresa */
+.columna-marca-pie {
+  flex: 1.4;
+}
+
+/* Enlace del logo del pie de página */
+.enlace-logo-pie {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Imagen del logo en el pie de página */
+.logo-pie {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Descripción de la empresa en el footer */
+.descripcion-pie-pagina {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Badge indicador de tiempo estimado */
+.badge-tiempo-pie {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FFFFFF;
+  width: fit-content;
+}
+
+.badge-tiempo-pie i {
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+/* Títulos de las columnas del footer */
+.titulo-columna-pie {
+  font-family: var(--fuente-general);
+  font-size: 18px;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Línea decorativa sutil debajo de cada título de columna */
+.titulo-columna-pie::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Lista de enlaces del footer */
+.lista-enlaces-pie {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Enlace individual del footer con efecto hover */
+.enlace-pie {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Hover suave en los enlaces */
+.enlace-pie:hover {
+  color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+/* Bloque de botones de contacto directo */
+.bloque-contacto-pie {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botón individual de contacto en el footer */
+.boton-contacto-pie {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 17px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Botón de teléfono */
+.boton-telefono-pie {
+  background-color: var(--color-accent);
+  color: var(--color-primario);
+  border: 1px solid var(--color-accent-hover);
+}
+
+.boton-telefono-pie:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-accent-hover);
+}
+
+/* Botón de WhatsApp */
+.boton-whatsapp-pie {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.boton-whatsapp-pie:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Barrita inferior de derechos, legales y créditos */
+.barrita-inferior-pie {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  gap: 1rem;
+}
+
+/* Enlaces legales */
+.legales-pie {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.enlace-legal-pie {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.enlace-legal-pie:hover {
+  color: #FFFFFF;
+}
+
+.separador-pie {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Texto de copyright */
+.copyright-pie {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Crédito de desarrollo RubiqStudio */
+.creditos-pie {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.enlace-creditos-pie {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.enlace-creditos-pie:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+/* =========================================
    RESPONSIVE - CABECERA
 ========================================= */
 
@@ -529,7 +763,6 @@ p {
     padding: 100px 8% 40px;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     gap: 16px;
     z-index: 999;
     opacity: 0;
@@ -570,7 +803,7 @@ p {
   .logo-menu-movil {
     height: 55px;
     width: auto;
-    border-radius: 20px;
+    border-radius: 8px;
     object-fit: contain;
   }
 
@@ -584,7 +817,7 @@ p {
   .boton-cta-menu-movil {
     width: 100%;
     justify-content: center;
-    padding: 16px 24px;
+    padding: 15px 23px;
     font-size: 16px;
   }
 
@@ -599,7 +832,7 @@ p {
     min-width: 100%;
     background-color: rgba(255, 255, 255, 0.04);
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
     box-shadow: none;
     margin-top: 0;
     padding: 0;
@@ -633,5 +866,30 @@ p {
 
   .item-menu-desplegable:hover .submenu-servicios {
     transform: none;
+  }
+
+  /* RESPONSIVE FOOTER MÓVIL */
+  .pie-pagina {
+    padding: 10% 5% 5%;
+  }
+
+  .grid-pie-pagina {
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .columna-pie-pagina {
+    width: 100%;
+  }
+
+  .barrita-inferior-pie {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .legales-pie {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
