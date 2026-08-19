@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Estilos específicos de la página Home -->
   <link rel="stylesheet" href="home.css">
+  <!-- Script JS sencillo para el menú responsive -->
+  <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +26,19 @@
       <a href="#inicio" class="enlace-logo">
         <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla" class="logo">
       </a>
+
+      <!-- Botón menú hamburguesa con 3 divs para animación sutil -->
+      <button class="boton-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación">
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+      </button>
       <ul class="menu-navegacion">
+        <!-- Logo dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-logo-movil">
+          <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" class="logo-menu-movil">
+        </li>
+
         <li class="item-menu"><a href="#inicio" class="enlace-menu">Inicio</a></li>
 
         <!-- Ítem Servicios con desplegable de los 5 servicios principales -->
@@ -42,6 +56,11 @@
 
         <li class="item-menu"><a href="#sobre-nosotros" class="enlace-menu">Sobre Nosotros</a></li>
         <li class="item-menu"><a href="#contacto" class="enlace-menu">Contacto</a></li>
+
+        <!-- Botón CTA dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-cta-movil">
+          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line" aria-hidden="true"></i> Llamar ahora</a>
+        </li>
       </ul>
       <a href="tel:+34600000000" class="boton-llamar-cabecera">Llamar ahora</a>
     </nav>
@@ -376,10 +395,98 @@
 
     <!-- ================= ZONA DE COBERTURA ================= -->
     <section id="cobertura" class="seccion-cobertura">
+      <!-- Destello decorativo naranja de fondo (lado izquierdo) -->
+      <div class="destello-naranja destello-cobertura-izquierda"></div>
+
       <div class="contenido-cobertura">
-        <h2 class="h2-cobertura">Zona de cobertura: Sevilla Capital y alrededores</h2>
-        <p class="texto-cobertura">Atendemos urgencias en toda Sevilla Capital y su área metropolitana. Si no estás
-          seguro de si llegamos a tu zona, escríbenos por WhatsApp y te lo confirmamos al momento.</p>
+
+        <!-- Cabecera de la sección: encabezado y texto introductorio -->
+        <div class="cabecera-cobertura">
+          <h2 class="h2-cobertura">Zona de cobertura: Sevilla Capital y alrededores</h2>
+          <p class="texto-cobertura">Atendemos urgencias en toda Sevilla Capital y su área metropolitana. Si no estás
+            seguro de si llegamos a tu zona, escríbenos por WhatsApp y te lo confirmamos al momento.</p>
+        </div>
+
+        <!-- Grid de zonas de cobertura: 2 tarjetas estructuradas -->
+        <div class="grid-cobertura">
+
+          <!-- Tarjeta 1: Sevilla Capital (Desplazamiento incluido) -->
+          <article class="tarjeta-cobertura">
+            <div class="cabecera-tarjeta-cobertura">
+              <div class="icono-cobertura">
+                <i class="ri-map-pin-user-line" aria-hidden="true"></i>
+              </div>
+              <div class="titulos-tarjeta-cobertura">
+                <span class="badge-cobertura">Llegada en <span class="destacado">20–30 min</span></span>
+                <h3 class="h3-cobertura">Sevilla Capital</h3>
+              </div>
+            </div>
+            <p class="descripcion-tarjeta-cobertura">Desplazamiento 100% gratuito e incluido en todos los distritos y
+              barrios de la capital:</p>
+            <div class="lista-etiquetas-cobertura">
+              <span class="etiqueta-zona">Casco Antiguo</span>
+              <span class="etiqueta-zona">Triana</span>
+              <span class="etiqueta-zona">Los Remedios</span>
+              <span class="etiqueta-zona">Nervión</span>
+              <span class="etiqueta-zona">Macarena</span>
+              <span class="etiqueta-zona">Sevilla Este</span>
+              <span class="etiqueta-zona">Santa Justa</span>
+              <span class="etiqueta-zona">Bermejales</span>
+              <span class="etiqueta-zona">Bellavista</span>
+              <span class="etiqueta-zona">San Bernardo</span>
+              <span class="etiqueta-zona">Pino Montano</span>
+              <span class="etiqueta-zona">San Jerónimo</span>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Área Metropolitana y Aljarafe -->
+          <article class="tarjeta-cobertura">
+            <div class="cabecera-tarjeta-cobertura">
+              <div class="icono-cobertura">
+                <i class="ri-road-map-line" aria-hidden="true"></i>
+              </div>
+              <div class="titulos-tarjeta-cobertura">
+                <span class="badge-cobertura badge-cobertura-aljarafe">Área Metropolitana</span>
+                <h3 class="h3-cobertura">Aljarafe y Municipios</h3>
+              </div>
+            </div>
+            <p class="descripcion-tarjeta-cobertura">Servicio urgente con atención inmediata en las principales
+              localidades metropolitanas:</p>
+            <div class="lista-etiquetas-cobertura">
+              <span class="etiqueta-zona">Mairena del Aljarafe</span>
+              <span class="etiqueta-zona">Dos Hermanas</span>
+              <span class="etiqueta-zona">Alcalá de Guadaíra</span>
+              <span class="etiqueta-zona">San Juan de Aznalfarache</span>
+              <span class="etiqueta-zona">Tomares</span>
+              <span class="etiqueta-zona">Camas</span>
+              <span class="etiqueta-zona">Bormujos</span>
+              <span class="etiqueta-zona">Castilleja de la Cuesta</span>
+              <span class="etiqueta-zona">Gines</span>
+              <span class="etiqueta-zona">La Rinconada</span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Banner de consulta rápida de ubicación -->
+        <div class="aviso-cobertura">
+          <div class="info-aviso-cobertura">
+            <i class="ri-question-answer-line" aria-hidden="true"></i>
+            <div class="textos-aviso-cobertura">
+              <h4 class="h4-aviso-cobertura">¿No ves tu zona o tienes dudas?</h4>
+              <p class="texto-aviso-cobertura">Indícanos tu dirección o ubicación por WhatsApp y te confirmamos al
+                instante el tiempo exacto de llegada.</p>
+            </div>
+          </div>
+          <div class="acciones-cobertura">
+            <!-- Reemplazar con el enlace de WhatsApp real -->
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" class="boton-principal"><i
+                class="ri-whatsapp-line" aria-hidden="true"></i> Consultar por WhatsApp</a>
+            <a href="tel:+34600000000" class="boton-secundario"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -443,7 +550,8 @@
             </div>
             <div class="contenido-porque-item">
               <h3 class="h3-porque">Desplazamiento rápido e incluido</h3>
-              <p class="texto-porque">Llegamos a tu dirección en <span class="destacado">20–30 minutos</span> en Sevilla Capital sin costes adicionales de desplazamiento.</p>
+              <p class="texto-porque">Llegamos a tu dirección en <span class="destacado">20–30 minutos</span> en Sevilla
+                Capital sin costes adicionales de desplazamiento.</p>
             </div>
           </article>
 
@@ -454,7 +562,8 @@
             </div>
             <div class="contenido-porque-item">
               <h3 class="h3-porque">Mano de obra especializada</h3>
-              <p class="texto-porque">Técnicos cualificados en aperturas limpias de puertas y vehículos, priorizando siempre trabajar sin destrozos ni daños.</p>
+              <p class="texto-porque">Técnicos cualificados en aperturas limpias de puertas y vehículos, priorizando
+                siempre trabajar sin destrozos ni daños.</p>
             </div>
           </article>
 
@@ -465,7 +574,8 @@
             </div>
             <div class="contenido-porque-item">
               <h3 class="h3-porque">Asesoramiento en seguridad residencial</h3>
-              <p class="texto-porque">Te ayudamos a reforzar la protección de tu vivienda con recomendaciones y piezas de alta seguridad adaptadas a tu puerta.</p>
+              <p class="texto-porque">Te ayudamos a reforzar la protección de tu vivienda con recomendaciones y piezas
+                de alta seguridad adaptadas a tu puerta.</p>
             </div>
           </article>
 
@@ -477,89 +587,148 @@
     <!-- ================= FAQ ================= -->
     <section id="faq" class="seccion-faq">
       <div class="contenido-faq">
-        <h2 class="h2-faq">FAQ — Cerrajero Sevilla</h2>
+
+        <!-- Div 1: Encabezado de la sección FAQ -->
+        <div class="encabezado-faq">
+          <h2 class="h2-faq">Preguntas frecuentes sobre nuestra cerrajería en Sevilla</h2>
+        </div>
+
+        <!-- Div 2: Contenedor con la lista de preguntas (ancho 70%) -->
         <div class="lista-faq">
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cuánto cuesta un cerrajero en Sevilla?</summary>
+            <summary class="faq-pregunta">
+              <span>¿Cuánto cuesta un cerrajero en Sevilla?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Depende del servicio, pero para que tengas una referencia: una apertura de puerta
               sin daños en horario diurno va de 60€ a 90€, y en horario nocturno o festivo de 90€ a 130€. Un cambio de
               cerradura básico empieza en 80€. Nosotros te damos el precio cerrado antes de tocar nada, así que nunca
               hay sorpresas cuando llega la factura.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">Tiempo de llegada</summary>
+            <summary class="faq-pregunta">
+              <span>Tiempo de llegada</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Nuestro tiempo medio de llegada en Sevilla Capital es de 20 a 30 minutos desde que
               nos llamas. Sabemos que cuando te quedas fuera de casa cada minuto se hace largo, así que priorizamos la
               rapidez sin dejar de hacer las cosas bien.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿El cerrajero puede abrir la puerta sin romper la cerradura?</summary>
+            <summary class="faq-pregunta">
+              <span>¿El cerrajero puede abrir la puerta sin romper la cerradura?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Sí, en la mayoría de los casos abrimos sin causar ningún daño en la puerta ni en la
               cerradura, usando técnicas de apertura profesional. Solo si la cerradura está muy deteriorada o el
               mecanismo lo impide, puede ser necesario forzarla un poco, y eso te lo explicamos in situ antes de actuar.
             </p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cuánto cuesta cambiar una cerradura en Sevilla?</summary>
+            <summary class="faq-pregunta">
+              <span>¿Cuánto cuesta cambiar una cerradura en Sevilla?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">El cambio de cerradura básica, con material incluido, va de 80€ a 120€. Si quieres
               subir el nivel de seguridad, una cerradura de seguridad media está entre 120€ y 180€, y una de alta
               seguridad entre 180€ y 300€. Te recomendamos la opción según tu puerta y necesidades reales, sin venderte
               de más.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Los cerrajeros de Sevilla trabajan las 24 horas, también de noche y festivos?
+            <summary class="faq-pregunta">
+              <span>¿Los cerrajeros de Sevilla trabajan las 24 horas, también de noche y festivos?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
             </summary>
             <p class="faq-respuesta">Sí, atendemos urgencias las 24 horas del día, todos los días del año, incluidos
               festivos. Eso sí, el horario nocturno (de 22:00 a 08:00) tiene un recargo de entre 20€ y 40€ sobre el
               precio base, algo habitual en el sector por la disponibilidad.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cómo sé el precio antes de que venga el cerrajero?</summary>
+            <summary class="faq-pregunta">
+              <span>¿Cómo sé el precio antes de que venga el cerrajero?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Al llamarnos o escribirnos por WhatsApp te damos un precio orientativo según lo que
               nos cuentes. Una vez el técnico está en tu domicilio, hace un diagnóstico rápido y te confirma el precio
               cerrado antes de empezar a trabajar. Tú decides si sigues adelante, sin compromiso.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿El servicio de cerrajero incluye el desplazamiento?</summary>
+            <summary class="faq-pregunta">
+              <span>¿El servicio de cerrajero incluye el desplazamiento?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Sí, el desplazamiento está incluido en el precio dentro de Sevilla Capital. No
               cobramos aparte por ir a tu domicilio.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Qué garantía tiene el trabajo del cerrajero?</summary>
+            <summary class="faq-pregunta">
+              <span>¿Qué garantía tiene el trabajo del cerrajero?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Todo el material que instalamos (cerraduras, bombines) lleva garantía oficial del
               fabricante, y respondemos por la mano de obra realizada. Si algo no queda bien, lo solucionamos.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Puedo pagar con tarjeta o solo en efectivo?</summary>
+            <summary class="faq-pregunta">
+              <span>¿Puedo pagar con tarjeta o solo en efectivo?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
             <p class="faq-respuesta">Nuestros técnicos aceptan tanto efectivo como tarjeta, así que no te preocupes si
               no llevas dinero encima en el momento de la emergencia.</p>
           </details>
+
           <details class="faq-item">
-            <summary class="faq-pregunta">¿Cómo contacto con un cerrajero en Sevilla si tengo una urgencia ahora mismo?
+            <summary class="faq-pregunta">
+              <span>¿Cómo contacto con un cerrajero en Sevilla si tengo una urgencia ahora mismo?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
             </summary>
             <p class="faq-respuesta">La forma más rápida es llamarnos directamente por teléfono, que es nuestro canal
               principal para urgencias. También puedes escribirnos por WhatsApp si prefieres no hablar. En ambos casos
               te atendemos al momento y coordinamos la llegada del técnico en <span class="destacado">20-30
                 minutos</span>.</p>
           </details>
+
         </div>
+
       </div>
     </section>
 
     <!-- ================= CTA FINAL ================= -->
     <section id="contacto" class="seccion-cta-final">
       <div class="contenido-cta-final">
-        <h2 class="h2-cta-final">Resuelve tu problema ahora: llama o pide presupuesto</h2>
-        <p class="texto-cta-final">Cuéntanos qué ha pasado y dónde estás. En la misma llamada te confirmamos la hora de
-          llegada y un precio orientativo, para que sepas exactamente a qué atenerte antes de que el técnico se ponga en
-          marcha. Si prefieres no llamar todavía, pide presupuesto y te respondemos con el precio cerrado según tu caso.
-        </p>
-        <div class="acciones-cta-final">
-          <!-- Reemplazar +34600000000 por el teléfono real -->
-          <a href="tel:+34600000000" class="boton-principal boton-llamar"><i class="ri-phone-line"
-              aria-hidden="true"></i> Llamar ahora</a>
-          <a href="#contacto" class="boton-secundario boton-presupuesto">Pedir presupuesto</a>
+
+        <!-- Capa superpuesta con degradado de Accent a Negro al 80% -->
+        <div class="capa-degradado-cta"></div>
+
+        <!-- Fila 1: Encabezado a la izquierda y párrafo a la derecha -->
+        <div class="fila-cta-superior">
+          <h2 class="h2-cta-final">Resuelve tu problema ahora: llama o pide presupuesto</h2>
+          <p class="texto-cta-final">Cuéntanos qué ha pasado y dónde estás. En la misma llamada te confirmamos la hora de
+            llegada y un precio orientativo, para que sepas exactamente a qué atenerte antes de que el técnico se ponga en
+            marcha. Si prefieres no llamar todavía, pide presupuesto y te respondemos con el precio cerrado según tu caso.
+          </p>
         </div>
+
+        <!-- Fila 2: En flex space-between con fondo Primary, texto Accent 36px y 2 botones -->
+        <div class="fila-cta-inferior">
+          <p class="destacado-cta-final">¿Tienes una urgencia ahora mismo?</p>
+          <div class="acciones-cta-final">
+            <!-- Reemplazar +34600000000 por el teléfono real -->
+            <a href="tel:+34600000000" class="boton-principal boton-llamar"><i class="ri-phone-line"
+                aria-hidden="true"></i> Llamar ahora</a>
+            <a href="#contacto" class="boton-secundario boton-presupuesto">Pedir presupuesto</a>
+          </div>
+        </div>
+
       </div>
     </section>
 

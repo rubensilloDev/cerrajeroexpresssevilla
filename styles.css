@@ -319,6 +319,12 @@ p {
   list-style: none;
 }
 
+/* Ítems de logo y CTA exclusivos para el menú a pantalla completa en móvil */
+.item-menu-logo-movil,
+.item-menu-cta-movil {
+  display: none;
+}
+
 /* Estilos de cada ítem del menú */
 
 /* Estilos de los enlaces del menú: color blanco */
@@ -438,24 +444,194 @@ p {
   transform: scale(1.05);
 }
 
+/* Botón hamburguesa con 3 divs: oculto por defecto en ordenadores */
+.boton-hamburguesa {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.linea-hamburguesa {
+  width: 100%;
+  height: 3px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.boton-hamburguesa:hover .linea-hamburguesa {
+  background-color: var(--color-accent);
+}
+
+/* Animación sutil de las 3 líneas al abrir el menú en forma de X */
+.boton-hamburguesa.activo .linea-hamburguesa:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+
+.boton-hamburguesa.activo .linea-hamburguesa:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.boton-hamburguesa.activo .linea-hamburguesa:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
 /* =========================================
    RESPONSIVE - CABECERA
 ========================================= */
 
-/* Ajustes del menú en pantallas medianas y pequeñas */
-@media (max-width: 1024px) {
-  .navegacion {
-    flex-wrap: wrap;
-    justify-content: center;
+@media (max-width: 768px) {
+  .cabecera {
+    width: 90%;
+    margin: 12px auto 0;
+    padding: 12px 18px;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    z-index: 1000;
   }
 
+  .navegacion {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .boton-hamburguesa {
+    display: flex;
+  }
+
+  /* Ocultar el botón de la cabecera fija en móvil para que sólo se vea al desplegar el menú */
+  .boton-llamar-cabecera {
+    display: none;
+  }
+
+  /* Menú a pantalla completa en móvil */
   .menu-navegacion {
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--color-primario);
+    padding: 100px 8% 40px;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     gap: 16px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
   }
 
-  .cabecera {
-    padding: 1.5% 3%;
+  /* Estado activo a pantalla completa */
+  .menu-navegacion.activo {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .item-menu {
+    width: 100%;
+    text-align: left;
+  }
+
+  .enlace-menu {
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  /* Mostrar logo de la empresa en la parte superior del menú desplegado */
+  .item-menu-logo-movil {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .logo-menu-movil {
+    height: 55px;
+    width: auto;
+    border-radius: 20px;
+    object-fit: contain;
+  }
+
+  /* Mostrar botón CTA en la parte inferior del menú desplegado */
+  .item-menu-cta-movil {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .boton-cta-menu-movil {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+
+  /* Submenú desplegable en móvil (oculto por defecto, se abre/cierra al pulsar en Servicios) */
+  .submenu-servicios {
+    position: static;
+    transform: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+    margin-top: 0;
+    padding: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* Estado abierto del submenú al pulsar en Servicios en móvil */
+  .item-menu-desplegable.abierto .submenu-servicios {
+    opacity: 1;
+    visibility: visible;
+    max-height: 350px;
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+
+  /* Rotación de la flecha al estar abierto el submenú en móvil */
+  .item-menu-desplegable.abierto .icono-desplegable {
+    transform: rotate(180deg);
+    color: var(--color-accent);
+  }
+
+  .enlace-submenu {
+    text-align: left;
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .enlace-submenu:hover {
+    padding-left: 20px;
+  }
+
+  .item-menu-desplegable:hover .submenu-servicios {
+    transform: none;
   }
 }

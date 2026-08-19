@@ -607,7 +607,255 @@
 }
 
 /* =========================================
-   SECCIÓN 5 - POR QUÉ ELEGIRNOS (GARANTÍAS)
+   SECCIÓN 5 - ZONA DE COBERTURA
+========================================= */
+
+/* Contenedor general de la sección de cobertura */
+.seccion-cobertura {
+  width: 100%;
+  padding: 5% 6%;
+  position: relative;
+}
+
+/* Destello decorativo a la izquierda en la cabecera de Cobertura */
+.seccion-cobertura .destello-cobertura-izquierda {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 0);
+}
+
+/* Contenedor del contenido: estructura en columna */
+.contenido-cobertura {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Cabecera de la sección: encabezado y texto introductorio centrado */
+.cabecera-cobertura {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Encabezado principal de la sección de cobertura */
+.h2-cobertura {
+  font-size: var(--tamano-h2);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-primario);
+}
+
+/* Texto introductorio de cobertura */
+.texto-cobertura {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: var(--tamano-texto-grande);
+  color: var(--color-texto-parrafo);
+  line-height: 1.5;
+}
+
+/* Grid de las dos tarjetas de zonas de cobertura */
+.grid-cobertura {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 3%;
+}
+
+/* Tarjeta individual de zona de cobertura */
+.tarjeta-cobertura {
+  width: calc((100% - 3%) / 2);
+  padding: 3.5% 3%;
+  background-color: var(--color-fondo-cards);
+  border: 1px solid #C4C6CE;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto hover suave en la tarjeta de cobertura */
+.tarjeta-cobertura:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11, 31, 58, 0.08);
+  border-color: var(--color-accent-hover);
+}
+
+/* Cabecera interior de la tarjeta (icono + títulos) */
+.cabecera-tarjeta-cobertura {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icono identificador de la zona */
+.icono-cobertura {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 78, 35, 0.1);
+  border-radius: 12px;
+}
+
+/* Estilo del icono interior en color Accent */
+.icono-cobertura i {
+  font-size: 28px;
+  color: var(--color-accent);
+}
+
+/* Contenedor de títulos de la tarjeta */
+.titulos-tarjeta-cobertura {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Badge de tiempo o estado en la tarjeta */
+.badge-cobertura {
+  font-family: var(--fuente-general);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Variante de badge para Aljarafe */
+.badge-cobertura-aljarafe {
+  color: var(--color-secundario);
+}
+
+/* Título de la tarjeta de zona */
+.h3-cobertura {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-primario);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+/* Descripción de la tarjeta de cobertura */
+.descripcion-tarjeta-cobertura {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.4;
+}
+
+/* Contenedor de etiquetas o tags de barrios/municipios */
+.lista-etiquetas-cobertura {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* Tag / Pill individual para cada barrio o municipio */
+.etiqueta-zona {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E4EB;
+  border-radius: 999px;
+  font-family: var(--fuente-general);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primario);
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover interactivo sobre las etiquetas de zonas */
+.etiqueta-zona:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(240, 78, 35, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Banner de aviso y consulta de cobertura rápida */
+.aviso-cobertura {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 2.5% 3.5%;
+  background-color: var(--color-accent-suave);
+  border: 1px solid rgba(240, 78, 35, 0.25);
+  border-radius: 20px;
+}
+
+/* Bloque de texto con icono dentro del aviso */
+.info-aviso-cobertura {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icono del banner de aviso */
+.info-aviso-cobertura i {
+  font-size: 32px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Contenedor de textos del aviso */
+.textos-aviso-cobertura {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Título del banner de aviso */
+.h4-aviso-cobertura {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--color-primario);
+  letter-spacing: -0.5px;
+}
+
+/* Párrafo explicativo del aviso */
+.texto-aviso-cobertura {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.4;
+}
+
+/* Botones de acción del banner de cobertura */
+.acciones-cobertura {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.acciones-cobertura .boton-principal,
+.acciones-cobertura .boton-secundario {
+  padding: 16px 24px;
+  font-size: 15px;
+}
+
+/* =========================================
+   SECCIÓN 6 - POR QUÉ ELEGIRNOS (GARANTÍAS)
 ========================================= */
 
 /* Estilos del contenedor general de la sección */
@@ -731,6 +979,231 @@
 .texto-porque {
   font-size: var(--tamano-texto-normal);
   color: var(--color-texto-parrafo);
+}
+
+/* =========================================
+   SECCIÓN 7 - PREGUNTAS FRECUENTES (FAQ)
+========================================= */
+
+/* Contenedor general de la sección FAQ */
+.seccion-faq {
+  width: 100%;
+  padding: 5% 6%;
+  position: relative;
+}
+
+/* Contenedor del contenido: encabezado + lista de preguntas centrada */
+.contenido-faq {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Contenedor del encabezado FAQ */
+.encabezado-faq {
+  text-align: center;
+}
+
+/* Encabezado principal de la sección FAQ con estilos generales del H2 */
+.h2-faq {
+  width: 80%;
+  margin: 0 auto;
+  font-size: var(--tamano-h2);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-primario);
+}
+
+/* Contenedor de las preguntas: 70% del ancho de pantalla */
+.lista-faq {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cada tarjeta FAQ: fondo #F5F3F6, borde 2px color Accent, radio 20px */
+.faq-item {
+  width: 100%;
+  background-color: var(--color-fondo-cards);
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Sombra suave en hover */
+.faq-item:hover {
+  box-shadow: 0 8px 25px rgba(240, 78, 35, 0.15);
+}
+
+/* Fila superior (Summary): pregunta en Inter, 18px, estilos similares a H2 + icono flecha a la derecha */
+.faq-pregunta {
+  padding: 24px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--fuente-general);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -0.8px;
+  color: var(--color-primario);
+  user-select: none;
+}
+
+/* Ocultar la flecha nativa del navegador en <details> */
+.faq-pregunta::-webkit-details-marker {
+  display: none;
+}
+
+/* Icono de flecha a la derecha en color Accent */
+.faq-pregunta i {
+  font-size: 24px;
+  color: var(--color-accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+/* Rotación del icono cuando la tarjeta está abierta */
+.faq-item[open] .faq-pregunta i {
+  transform: rotate(180deg);
+}
+
+/* Fila inferior: respuesta con los mismos estilos generales del párrafo */
+.faq-respuesta {
+  padding: 0 30px 24px 30px;
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+}
+
+/* =========================================
+   SECCIÓN 8 - SECCIÓN FINAL CTA
+========================================= */
+
+/* Contenedor general de la sección CTA final */
+.seccion-cta-final {
+  width: 100%;
+  padding: 5% 6%;
+  position: relative;
+}
+
+/* Div dentro con el contenido de la sección, imagen de fondo e interacción visual */
+.contenido-cta-final {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1% 3%;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 600px;
+  gap: 3.5rem;
+  background-image: url("img/img-manos-cambiando-puerta.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 15px 40px rgba(11, 31, 58, 0.2);
+}
+
+/* Div en lo alto con un degradado de izquierda a derecha yendo de Accent a Negro (ambos al 80%) */
+.capa-degradado-cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(240, 78, 35, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+
+/* Fila de arriba: contiene un encabezado a la izquierda y un párrafo a la derecha */
+.fila-cta-superior {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Encabezado con los mismos estilos generales del h2 en color principal */
+.h2-cta-final {
+  width: 50%;
+  font-size: var(--tamano-h2);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-primario);
+}
+
+/* Párrafo alineado a la derecha de color #E6E6E6 al 85%, en black a 20px y -1.5px de espacio entre líneas */
+.texto-cta-final {
+  width: 45%;
+  text-align: right;
+  color: rgba(230, 230, 230, 0.85);
+  font-weight: 900;
+  font-size: var(--fuente-general);
+  line-height: 1.55;
+  letter-spacing: -1.2px;
+}
+
+/* Fila de abajo: en flex con space-between y fondo de color primary (más compacta) */
+.fila-cta-inferior {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 2.5rem;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto de estilos a un h2, pero es un p normal y de color Accent en 28px de tamaño */
+.destacado-cta-final {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* Div a la derecha con 2 botones (iguales a la sección anterior) */
+.acciones-cta-final {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.acciones-cta-final .boton-principal,
+.acciones-cta-final .boton-secundario {
+  padding: 14px 24px;
+  font-size: 15px;
+}
+
+/* El botón secundario de pedir presupuesto con el texto en color Accent (naranja) */
+.acciones-cta-final .boton-secundario {
+  color: var(--color-accent);
 }
 
 /* =========================================
@@ -1002,7 +1475,53 @@
     transform: none;
   }
 
-  /* SECCIÓN 5 (POR QUÉ ELEGIRNOS) MÓVIL - columnas apiladas */
+  /* SECCIÓN 5 (COBERTURA) MÓVIL */
+  .cabecera-cobertura {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .h2-cobertura {
+    font-size: clamp(2.5rem, 8vw, 3.2rem);
+    line-height: 85%;
+  }
+
+  .texto-cobertura {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .grid-cobertura {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .tarjeta-cobertura {
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .aviso-cobertura {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .acciones-cobertura {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .acciones-cobertura .boton-principal,
+  .acciones-cobertura .boton-secundario {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* SECCIÓN 6 (POR QUÉ ELEGIRNOS) MÓVIL - columnas apiladas */
   .contenido-porque {
     flex-direction: column;
     gap: 2.5rem;
@@ -1037,5 +1556,76 @@
   .porque-item {
     padding: 24px 20px;
     gap: 16px;
+  }
+
+  /* SECCIÓN 7 (FAQ) MÓVIL - tarjetas adaptadas a ancho completo */
+  .h2-faq {
+    font-size: clamp(2.5rem, 8vw, 3.2rem);
+    line-height: 85%;
+  }
+
+  .lista-faq {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .faq-pregunta {
+    padding: 20px 20px;
+    font-size: 16px;
+  }
+
+  .faq-respuesta {
+    padding: 0 20px 20px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* SECCIÓN 8 (CTA FINAL) MÓVIL */
+  .contenido-cta-final {
+    padding: 30px 20px;
+    gap: 2rem;
+  }
+
+  .fila-cta-superior {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .h2-cta-final {
+    width: 100%;
+    font-size: clamp(2.5rem, 8vw, 3.2rem);
+    line-height: 85%;
+  }
+
+  .texto-cta-final {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+  }
+
+  .fila-cta-inferior {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .destacado-cta-final {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .acciones-cta-final {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .acciones-cta-final .boton-principal,
+  .acciones-cta-final .boton-secundario {
+    width: 100%;
+    justify-content: center;
   }
 }
