@@ -1,0 +1,826 @@
+/* =========================================
+   ESTILOS DE LA PÁGINA CAMBIO DE CERRADURAS
+========================================= */
+
+/* =========================================
+   HERO - SECCIÓN PRINCIPAL
+========================================= */
+
+/* Contenedor general del hero: imagen de fondo y posición relativa */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(120px, 14vw, 180px) 10% 10%;
+  background-image: url('img/img-cerrajero .jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Capa superpuesta con degradado de Accent (naranja) a Blanco */
+.capa-degradado-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(240, 78, 35, 0.85) 0%, transparent 20%, transparent 60%, rgba(255, 255, 255, 0.98) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenedor del contenido del hero: dos divs en columna */
+.contenido-hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Primer div: alineado a la izquierda, ocupa el 65% del ancho */
+.hero-primer-div {
+  align-self: flex-start;
+  width: 75%;
+  text-align: left;
+}
+
+/* Encabezado principal H1 en color blanco con sombra protectora */
+.h1-hero {
+  font-size: var(--tamano-h1);
+  color: #FFFFFF;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -2px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+/* Palabra "Sevilla" destacada en color Accent */
+.h1-hero .destacado {
+  color: var(--color-accent);
+}
+
+/* Segundo div: situado debajo y alineado a la derecha */
+.hero-segundo-div {
+  align-self: flex-end;
+  width: 55%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+/* Párrafo descriptivo en color normal text */
+.texto-hero {
+  font-size: var(--tamano-texto-grande);
+  color: gainsboro;
+  font-weight: bold;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+/* Contenedor de botones alineado a la derecha */
+.acciones-hero {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Ajustes finos de los botones del hero */
+.acciones-hero .boton-principal,
+.acciones-hero .boton-secundario {
+  padding: 15px 30px;
+  font-size: var(--tamano-texto-normal);
+}
+
+
+/* =========================================
+   CASOS DE CAMBIO - SEGUNDA SECCIÓN
+========================================= */
+
+.seccion-casos {
+  width: 100%;
+  padding: 6% 8%;
+  background-color: var(--color-fondo);
+}
+
+.contenido-casos {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Div 1 - Introducción */
+.casos-introduccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.h2-casos {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.texto-introduccion-casos {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+  max-width: 75%;
+}
+
+.acciones-introduccion {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Div 2 - Tarjetas */
+.casos-contenedor-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Div 2.1 - Tres tarjetas superiores */
+.casos-tarjetas-superiores {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
+
+.caso-item-tarjeta {
+  flex: 1;
+  background-color: var(--color-accent-suave);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.caso-item-tarjeta:hover {
+  box-shadow: 0 10px 30px rgba(240, 78, 35, 0.12);
+}
+
+/* Iconos de las tarjetas */
+.icono-caso-tarjeta i {
+  font-size: 32px;
+  color: var(--color-accent);
+  background-color: var(--color-accent-suave);
+  padding: 12px;
+  border-radius: 8px;
+  display: inline-flex;
+}
+
+/* Encabezados de las tarjetas (H3 con estilo de H2 pero de 26px) */
+.h3-caso-tarjeta {
+  font-family: var(--fuente-encabezados);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 90%;
+  letter-spacing: -1px;
+  color: var(--color-primario);
+}
+
+.texto-caso-tarjeta {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.5;
+}
+
+/* Botón contratar servicio */
+.boton-caso-tarjeta {
+  margin-top: auto;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  border: 1px solid var(--color-accent);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--fuente-general);
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-caso-tarjeta:hover {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.boton-caso-tarjeta i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.boton-caso-tarjeta:hover i {
+  transform: translateX(4px);
+}
+
+/* Div 2.2 - Tarjeta inferior a ancho completo */
+.caso-tarjeta-inferior {
+  width: 100%;
+  background-color: var(--color-fondo-cards);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  min-height: 380px;
+  transition: box-shadow 0.3s ease;
+}
+
+.caso-tarjeta-inferior:hover {
+  box-shadow: 0 10px 30px rgba(240, 78, 35, 0.12);
+}
+
+.caso-tarjeta-inferior-izq {
+  flex: 1.2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.caso-tarjeta-inferior-der {
+  flex: 0.8;
+  position: relative;
+  min-height: 100%;
+}
+
+.imagen-caso-inferior {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================================
+   OPCIONES DE SEGURIDAD - TERCERA SECCIÓN
+========================================= */
+
+.seccion-opciones {
+  position: relative;
+  width: 100%;
+  padding: 6% 8%;
+  background-color: var(--color-fondo);
+  overflow: visible;
+}
+
+/* Destello decorativo a la izquierda entre la sección 2 y 3 */
+.destello-opciones-izquierda {
+  top: -150px;
+  left: -150px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.contenido-opciones {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+}
+
+/* Columna izquierda (contenido) */
+.opciones-contenido-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Div 1.1 - Presentación */
+.opciones-presentacion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.h2-opciones {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.texto-opciones-presentacion {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+}
+
+
+
+/* Div 1.2 - Lista de tarjetas */
+.opciones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Tarjeta individual */
+.opciones-lista .opcion-item {
+  background-color: rgba(240, 78, 35, 0.08);
+  /* Accent con ~10% opacidad */
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 24px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opciones-lista .opcion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240, 78, 35, 0.1);
+}
+
+.h3-opcion {
+  font-family: var(--fuente-encabezados);
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--color-primario);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.texto-opcion {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.boton-opcion {
+  margin-top: 8px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 22px;
+  border: 1px solid var(--color-accent);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--fuente-general);
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-opcion:hover {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.boton-opcion i {
+  font-size: 16px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.boton-opcion:hover i {
+  transform: translateX(4px);
+}
+
+/* Columna derecha (imagen) */
+.opciones-imagen-col {
+  align-self: center;
+  width: 100%;
+}
+
+.imagen-opciones {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* =========================================
+   TABLA DE PRECIOS - CUARTA SECCIÓN
+========================================= */
+
+.seccion-precios {
+  width: 100%;
+  padding: 6% 8%;
+  background-color: var(--color-fondo);
+}
+
+.contenido-precios {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Div 1 - Cabecera */
+.contenedor-encabezado-precios {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.h2-precios {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.texto-precios {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+  max-width: 80%;
+}
+
+.acciones-precios {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Div 2 - Grid de tarjetas de precios */
+.grid-precios {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 3%;
+}
+
+/* Tarjeta de precio estándar */
+.precio-item {
+  width: calc((100% - 6%) / 3);
+  min-height: 450px;
+  padding: 3% 2.5%;
+  background-color: var(--color-fondo-cards);
+  border: 1px solid #C4C6CE;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.precio-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.1);
+}
+
+/* Tarjeta destacada */
+.tarjeta-destacada {
+  background-color: rgba(240, 78, 35, 0.15);
+  border: 2px solid var(--color-accent-hover);
+  box-shadow: 0 12px 35px rgba(240, 78, 35, 0.35);
+  transform: scale(1.08);
+}
+
+.tarjeta-destacada:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(240, 78, 35, 0.45);
+}
+
+.cabecera-tarjeta-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Fila 1 - Nombre del servicio */
+.h3-precio {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1px;
+  color: var(--color-primario);
+}
+
+/* Fila 2 - Bloque de precio */
+.bloque-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.precio-tarjeta {
+  font-family: var(--fuente-encabezados);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-primario);
+}
+
+.subtexto-precio {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-texto-parrafo);
+}
+
+/* Fila 3 - Lista de características */
+.lista-precio {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fila-precio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--tamano-texto-normal);
+  line-height: 1.4;
+  color: var(--color-texto-parrafo);
+}
+
+.fila-precio i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.texto-fila-precio {
+  text-align: left;
+}
+
+/* Fila 4 - Botón de acción */
+.boton-precio {
+  align-self: center;
+  width: fit-content;
+  justify-content: center;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET (1024px)
+========================================= */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 120px 6% 8%;
+  }
+
+  .hero-primer-div {
+    width: 80%;
+  }
+
+  .hero-segundo-div {
+    width: 80%;
+  }
+
+  /* Ajustes de la sección de casos en tablet */
+  .seccion-casos {
+    padding: 6% 6%;
+  }
+
+  .casos-tarjetas-superiores {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .caso-tarjeta-inferior {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .caso-tarjeta-inferior-izq {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .caso-tarjeta-inferior-der {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* Ajustes de la sección de opciones en tablet */
+  .seccion-opciones {
+    padding: 6% 6%;
+  }
+
+  .contenido-opciones {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .opciones-imagen-col {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Ajustes de la sección de precios en tablet */
+  .seccion-precios {
+    padding: 6% 6%;
+  }
+
+  .contenedor-encabezado-precios {
+    width: 85%;
+  }
+
+  .grid-precios {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .precio-item {
+    width: 80%;
+    padding: 30px 24px;
+  }
+
+  .tarjeta-destacada,
+  .tarjeta-destacada:hover {
+    transform: none;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVIL (768px)
+========================================= */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 5% 40px;
+  }
+
+  .contenido-hero {
+    gap: 2rem;
+  }
+
+  .hero-primer-div {
+    width: 100%;
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .h1-hero {
+    font-size: clamp(2.5rem, 8vw, 3.2rem);
+    line-height: 90%;
+  }
+
+  .hero-segundo-div {
+    width: 100%;
+    align-self: stretch;
+    text-align: center;
+    align-items: center;
+  }
+
+  .texto-hero {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .acciones-hero {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .acciones-hero .boton-principal,
+  .acciones-hero .boton-secundario {
+    width: 80%;
+    justify-content: center;
+  }
+
+  /* Ajustes de la sección de casos en móvil */
+  .seccion-casos {
+    padding: 10% 5%;
+  }
+
+  .casos-introduccion {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .texto-introduccion-casos {
+    max-width: 100%;
+  }
+
+  .acciones-introduccion {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .acciones-introduccion .boton-principal,
+  .acciones-introduccion .boton-secundario {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .caso-item-tarjeta {
+    padding: 30px 20px;
+  }
+
+  .caso-tarjeta-inferior-izq {
+    padding: 30px 20px;
+  }
+
+  /* Ajustes de la sección de opciones en móvil */
+  .seccion-opciones {
+    padding: 10% 5%;
+  }
+
+  .opciones-lista .opcion-item {
+    padding: 20px;
+  }
+
+  /* Ajustes de la sección de precios en móvil */
+  .seccion-precios {
+    padding: 10% 5%;
+  }
+
+  .contenedor-encabezado-precios {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .texto-precios {
+    max-width: 100%;
+  }
+
+  .acciones-precios {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .acciones-precios .boton-principal,
+  .acciones-precios .boton-secundario {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .precio-item {
+    width: 100%;
+    padding: 24px 20px;
+  }
+}

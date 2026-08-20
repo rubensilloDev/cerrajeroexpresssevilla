@@ -1,19 +1,714 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cambio de cerraduras y bombines de seguridad en Sevilla. Protege tu hogar con las mejores marcas.">
-  <title>Cambio de Cerraduras en Sevilla | Apertura Express</title>
+  <meta name="description"
+    content="Cambio de cerraduras en Sevilla rápido y profesional. Instalación el mismo día, bombines de alta seguridad y presupuesto cerrado sin sorpresas. ¡Llama ya!">
+  <!-- Meta title con la kw principal (cambio-cerraduras-sevilla) integrada sutilmente + hook comercial -->
+  <title>Cambio de Cerraduras en Sevilla | Instalación el Mismo Día y Precio Cerrado</title>
+
+  <!-- Remix Icon: librería de iconos -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Estilos generales de la web -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Estilos específicos de la página Cambio de Cerraduras -->
+  <link rel="stylesheet" href="cambio-cerraduras.css">
+  <!-- Script JS sencillo para el menú responsive -->
   <script src="main.js" defer></script>
 </head>
+
 <body>
-  <main style="padding: 100px 20px; text-align: center; font-family: sans-serif;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Cambio de Cerraduras</h1>
-    <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Página en construcción. Estamos preparando este servicio para vos.</p>
-    <a href="index.html" class="boton-principal" style="text-decoration: none; padding: 12px 24px; border-radius: 6px; background-color: #0056b3; color: white; display: inline-block;">Volver al Inicio</a>
+
+  <!-- ================= HEADER ================= -->
+  <!-- cabecera-menu -->
+  <header class="cabecera">
+    <!-- navegacion-principal -->
+    <nav class="navegacion">
+      <!-- logo-marca -->
+      <a href="index.html#inicio" class="enlace-logo">
+        <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla" class="logo">
+      </a>
+
+      <!-- boton-hamburguesa-movil -->
+      <button class="boton-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación">
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+      </button>
+
+      <!-- menu-navegacion -->
+      <ul class="menu-navegacion">
+        <!-- logo-menu-movil -->
+        <li class="item-menu-logo-movil">
+          <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" class="logo-menu-movil">
+        </li>
+
+        <li class="item-menu"><a href="index.html#inicio" class="enlace-menu">Inicio</a></li>
+
+        <!-- item-menu-desplegable-servicios -->
+        <li class="item-menu item-menu-desplegable">
+          <a href="index.html#servicios" class="enlace-menu">Servicios <i class="ri-arrow-down-s-line icono-desplegable"
+              aria-hidden="true"></i></a>
+          <ul class="submenu-servicios">
+            <li class="item-submenu"><a href="cerrajero-urgente.html" class="enlace-submenu">Cerrajero Urgente en
+                Sevilla</a></li>
+            <li class="item-submenu"><a href="cambio-cerraduras.html" class="enlace-submenu">Cambio de Cerraduras</a>
+            </li>
+            <li class="item-submenu"><a href="aperturas-coches.html" class="enlace-submenu">Aperturas de Coches</a></li>
+          </ul>
+        </li>
+
+        <li class="item-menu"><a href="index.html#sobre-nosotros" class="enlace-menu">Sobre Nosotros</a></li>
+        <li class="item-menu"><a href="index.html#contacto" class="enlace-menu">Contacto</a></li>
+
+        <!-- boton-cta-menu-movil -->
+        <li class="item-menu-cta-movil">
+          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line"
+              aria-hidden="true"></i> Llamar ahora</a>
+        </li>
+      </ul>
+      <a href="tel:+34600000000" class="boton-llamar-cabecera">Llamar ahora</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <!-- hero-section -->
+    <section id="inicio" class="hero">
+      <!-- capa-degradado-hero -->
+      <div class="capa-degradado-hero"></div>
+
+      <!-- contenido-hero -->
+      <div class="contenido-hero">
+        <!-- hero-primer-div -->
+        <div class="hero-primer-div">
+          <!-- encabezado-hero -->
+          <h1 class="h1-hero">Cambio de Cerraduras en <span class="destacado">Sevilla</span> | Instalación el Mismo Día
+          </h1>
+        </div>
+
+        <!-- hero-segundo-div -->
+        <div class="hero-segundo-div">
+          <!-- texto-hero -->
+          <p class="texto-hero">Cerraduras básicas, de seguridad media y alta seguridad. Presupuesto cerrado antes de
+            instalar, con garantía oficial.</p>
+          <!-- acciones-hero -->
+          <div class="acciones-hero">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CASOS DE CAMBIO ================= -->
+    <!-- seccion-casos -->
+    <section class="seccion-casos">
+      <!-- contenido-casos -->
+      <div class="contenido-casos">
+
+        <!-- casos-introduccion -->
+        <div class="casos-introduccion">
+          <h2 class="h2-casos">Cambiamos tu cerradura en estos casos</h2>
+          <p class="texto-introduccion-casos">Si tu cerradura está fallando, has tenido un problema de seguridad o
+            querés actualizar tu bombín, nuestro equipo de cerrajeros en Sevilla está disponible las 24 horas para
+            ayudarte con garantía oficial.</p>
+          <div class="acciones-introduccion">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+
+        <!-- casos-contenedor-tarjetas -->
+        <div class="casos-contenedor-tarjetas">
+
+          <!-- casos-tarjetas-superiores -->
+          <div class="casos-tarjetas-superiores">
+
+            <!-- tarjeta-caso-1 -->
+            <article class="caso-item-tarjeta">
+              <div class="icono-caso-tarjeta">
+                <i class="ri-error-warning-line" aria-hidden="true"></i>
+              </div>
+              <h3 class="h3-caso-tarjeta">Cerradura rota, forzada o dañada</h3>
+              <p class="texto-caso-tarjeta">El bombín no gira, la llave se atasca o el mecanismo ha dejado de funcionar.
+                Lo sustituimos por uno nuevo, adaptado a tu puerta.</p>
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </article>
+
+            <!-- tarjeta-caso-2 -->
+            <article class="caso-item-tarjeta">
+              <div class="icono-caso-tarjeta">
+                <i class="ri-shield-keyhole-line" aria-hidden="true"></i>
+              </div>
+              <h3 class="h3-caso-tarjeta">Después de un intento de robo</h3>
+              <p class="texto-caso-tarjeta">Si han forzado tu cerradura, la cambiamos por una de mayor seguridad y
+                revisamos el estado de la puerta para confirmar que queda protegida.</p>
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </article>
+
+            <!-- tarjeta-caso-3 -->
+            <article class="caso-item-tarjeta">
+              <div class="icono-caso-tarjeta">
+                <i class="ri-home-4-fill" aria-hidden="true"></i>
+              </div>
+              <h3 class="h3-caso-tarjeta">Cambio de vivienda o de inquilino</h3>
+              <p class="texto-caso-tarjeta">Alquiler nuevo, fin de contrato o compra de piso. Cambiamos la cerradura
+                para que solo tú tengas acceso.</p>
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </article>
+
+          </div>
+
+          <!-- caso-tarjeta-inferior -->
+          <article class="caso-tarjeta-inferior">
+            <!-- div-izquierdo -->
+            <div class="caso-tarjeta-inferior-izq">
+              <div class="icono-caso-tarjeta">
+                <i class="ri-lock-password-line" aria-hidden="true"></i>
+              </div>
+              <h3 class="h3-caso-tarjeta">Mejora de seguridad (bombín anti-bumping)</h3>
+              <p class="texto-caso-tarjeta">Si quieres reforzar tu vivienda sin cambiar toda la cerradura, instalamos
+                bombines anti-bumping y anti-taladro compatibles con tu puerta actual.</p>
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </div>
+            <!-- div-derecho -->
+            <div class="caso-tarjeta-inferior-der">
+              <img src="img/img-llaves.png" alt="Instalación de bombín anti-bumping de alta seguridad"
+                class="imagen-caso-inferior">
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= OPCIONES DE SEGURIDAD ================= -->
+    <!-- seccion-opciones -->
+    <section class="seccion-opciones">
+      <!-- destello decorativo a la izquierda entre secciones -->
+      <div class="destello-naranja destello-opciones-izquierda"></div>
+
+      <!-- contenido-opciones -->
+      <div class="contenido-opciones">
+
+        <!-- opciones-contenido-col (columna izquierda) -->
+        <div class="opciones-contenido-col">
+
+          <!-- opciones-presentacion (H2, parrafo, botones) -->
+          <div class="opciones-presentacion">
+            <h2 class="h2-opciones">Opciones de cerradura según el nivel de seguridad que necesites</h2>
+            <p class="texto-opciones-presentacion">Te ofrecemos diferentes alternativas adaptadas a tu tipo de puerta,
+              nivel de riesgo y presupuesto. Trabajamos con marcas líderes y te damos precio cerrado antes de instalar.
+            </p>
+          </div>
+
+          <!-- opciones-lista (tarjetas) -->
+          <div class="opciones-lista">
+
+            <!-- tarjeta-opcion-1 -->
+            <article class="opcion-item">
+              <h3 class="h3-opcion">Básica</h3>
+              <p class="texto-opcion">Cerradura estándar con material incluido. Adecuada para segundas residencias,
+                trasteros o puertas interiores sin necesidades especiales de seguridad.</p>
+              <a href="tel:+34600000000" class="boton-opcion">Contratar servicio <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- tarjeta-opcion-2 -->
+            <article class="opcion-item">
+              <h3 class="h3-opcion">Seguridad media</h3>
+              <p class="texto-opcion">Bombín reforzado con protección anti-bumping. La opción más elegida para viviendas
+                habituales que buscan un salto real en seguridad sin disparar el presupuesto.</p>
+              <a href="tel:+34600000000" class="boton-opcion">Contratar servicio <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- tarjeta-opcion-3 -->
+            <article class="opcion-item">
+              <h3 class="h3-opcion">Alta seguridad</h3>
+              <p class="texto-opcion">Cerradura de alta gama con máxima resistencia a taladro, bumping y ganzúa.
+                Recomendada para viviendas principales, bajos y puertas de acceso directo a la calle.</p>
+              <a href="tel:+34600000000" class="boton-opcion">Contratar servicio <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- opciones-imagen-col (columna derecha) -->
+        <div class="opciones-imagen-col">
+          <img src="img/collage-tipos-cerraduras.jpeg" alt="Cerrajero profesional instalando cerradura de seguridad"
+            class="imagen-opciones">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PRECIOS ================= -->
+    <!-- seccion-precios -->
+    <section id="precios" class="seccion-precios">
+      <!-- contenido-precios -->
+      <div class="contenido-precios">
+
+        <!-- contenedor-encabezado-precios -->
+        <div class="contenedor-encabezado-precios">
+          <h2 class="h2-precios">Precio del cambio de cerradura en Sevilla</h2>
+          <p class="texto-precios">Estos son nuestros precios cerrados orientativos según el nivel de protección que elijas. Te damos presupuesto exacto sin sorpresas antes de empezar.</p>
+          <div class="acciones-precios">
+            <a href="tel:+34600000000" class="boton-principal">Llamar ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+
+        <!-- grid-precios -->
+        <div class="grid-precios">
+
+          <!-- tarjeta-precio-basica -->
+          <article class="precio-item">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Cambio cerradura básica</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">80€ – 120€</span>
+                <span class="subtexto-precio">CERRADURAS BÁSICAS</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Material y mano de obra incluidos</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Instalación el mismo día</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Ideal para interiores o trasteros</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal-azul boton-precio">Contratar ahora</a>
+          </article>
+
+          <!-- tarjeta-precio-destacada (seguridad media) -->
+          <article class="precio-item tarjeta-destacada">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Cerradura seguridad media</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">120€ – 180€</span>
+                <span class="subtexto-precio">SEGURIDAD MEDIA</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Bombín reforzado anti-bumping</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Protección anti-taladro y ganzúa</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Garantía oficial por escrito</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal boton-precio">Contratar ahora</a>
+          </article>
+
+          <!-- tarjeta-precio-alta -->
+          <article class="precio-item">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Cerradura alta seguridad</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">180€ – 300€</span>
+                <span class="subtexto-precio">ALTA SEGURIDAD</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Bombín de alta gama anti-bumping</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Escudo acorazado protector</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Máxima resistencia a ataques físicos</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal-azul boton-precio">Contratar ahora</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PROCESO DE TRABAJO ================= -->
+    <!-- seccion-proceso -->
+    <section class="seccion-proceso">
+      <!-- contenido-proceso -->
+      <div class="contenido-proceso">
+
+        <!-- encabezado-proceso -->
+        <div class="encabezado-proceso">
+          <h2 class="h2-proceso">Así realizamos tu cambio de cerradura</h2>
+        </div>
+
+        <!-- div-tarjetas-pasos -->
+        <div class="grid-pasos-proceso">
+
+          <!-- tarjeta-paso -->
+          <article class="paso-item">
+            <span class="numero-paso">1</span>
+            <h3 class="h3-paso">Valoramos tu puerta y cerradura actual</h3>
+            <p class="texto-paso">El técnico revisa el estado de la puerta y el tipo de cerradura instalada antes de
+              recomendar nada.</p>
+          </article>
+
+          <!-- tarjeta-paso -->
+          <article class="paso-item">
+            <span class="numero-paso">2</span>
+            <h3 class="h3-paso">Te proponemos el bombín o cerradura más adecuado</h3>
+            <p class="texto-paso">Según tu presupuesto y el nivel de seguridad que necesites, te damos opciones
+              concretas
+              con precio cerrado.</p>
+          </article>
+
+          <!-- tarjeta-paso -->
+          <article class="paso-item">
+            <span class="numero-paso">3</span>
+            <h3 class="h3-paso">Instalamos el mismo día, sin dañar la puerta</h3>
+            <p class="texto-paso">Una vez confirmas, instalamos en la misma visita. Trabajamos sobre el marco existente
+              siempre que sea posible.</p>
+          </article>
+
+          <!-- tarjeta-paso -->
+          <article class="paso-item">
+            <span class="numero-paso">4</span>
+            <h3 class="h3-paso">Garantía oficial en la pieza instalada</h3>
+            <p class="texto-paso">Toda cerradura o bombín que instalamos lleva garantía oficial del fabricante.</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ZONA DE COBERTURA ================= -->
+    <!-- seccion-cobertura -->
+    <section id="cobertura" class="seccion-cobertura">
+      <!-- contenido-cobertura -->
+      <div class="contenido-cobertura">
+
+        <!-- encabezado-cobertura -->
+        <div class="encabezado-cobertura">
+          <h2 class="h2-cobertura">Cambio de cerraduras en Sevilla Capital y alrededores</h2>
+          <p class="texto-cobertura">Servicio disponible en toda Sevilla Capital y su área metropolitana. Desplazamiento
+            incluido.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <!-- seccion-faq -->
+    <section id="faq" class="seccion-faq">
+      <!-- contenido-faq -->
+      <div class="contenido-faq">
+
+        <!-- encabezado-faq -->
+        <div class="encabezado-faq">
+          <h2 class="h2-faq">Preguntas frecuentes sobre el cambio de cerraduras</h2>
+        </div>
+
+        <!-- lista-preguntas-faq -->
+        <div class="lista-faq">
+
+          <!-- faq-item-1 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Cuánto cuesta cambiar la cerradura de una puerta?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Depende del nivel de seguridad que elijas. Una cerradura básica, con material
+              incluido, va de 80€ a 120€. Si quieres seguridad media, el precio sube a 120€–180€, y si buscas alta
+              seguridad, entre 180€ y 300€. El precio exacto te lo confirmamos in situ, según tu puerta.</p>
+          </details>
+
+          <!-- faq-item-2 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Cuánto cuesta cambiar solo el bombín de una puerta?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">El bombín es la pieza donde entra la llave y hace girar el mecanismo. Cambiarlo
+              solo,
+              sin sustituir toda la cerradura, suele moverse en el mismo rango que una cerradura básica, desde 80€,
+              dependiendo del nivel de seguridad del bombín. Es una opción más rápida y económica que cambiar todo el
+              mecanismo.</p>
+          </details>
+
+          <!-- faq-item-3 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Cuánto cuesta un cambio de cerradura en Sevilla?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">En Sevilla Capital, un cambio de cerradura básico va de 80€ a 120€, con el
+              desplazamiento ya incluido en el precio. No cobramos aparte por ir a tu domicilio dentro de la capital.
+            </p>
+          </details>
+
+          <!-- faq-item-4 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>Se me ha roto la llave dentro del bombín y no puedo sacarla, ¿se puede cambiar sin tener la
+                llave?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí, es una de las situaciones más habituales que resolvemos. Extraemos el trozo de
+              llave o abrimos el bombín sin necesidad de que tengas una llave funcional, y te colocamos uno nuevo con su
+              juego de llaves correspondiente. No hace falta que intentes sacarla tú antes; puede complicar más la
+              cerradura.</p>
+          </details>
+
+          <!-- faq-item-5 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Cuánto puede costar cambiar la cerradura de una puerta blindada de alta seguridad?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Las puertas blindadas y acorazadas suelen llevar cerraduras de alta seguridad, así
+              que
+              la sustitución tiene un coste desde 200€. Es más caro que una cerradura estándar porque el mecanismo es
+              más
+              complejo, con más puntos de anclaje y materiales reforzados.</p>
+          </details>
+
+          <!-- faq-item-6 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>Tengo una puerta metálica en un local o garaje, ¿el precio de cambiar la cerradura es distinto al de
+                una puerta normal?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">El precio depende del tipo de cerradura que necesite esa puerta en concreto, no
+              tanto del material de la puerta en sí, dentro de los mismos rangos: 80€–120€ básica, 120€–180€ seguridad
+              media, 180€–300€ alta seguridad. El técnico valora la puerta al llegar y te confirma el precio antes de
+              empezar.</p>
+          </details>
+
+          <!-- faq-item-7 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿El precio de cambiar la cerradura de una puerta exterior de la calle es más caro que el de una
+                puerta interior?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">El rango de precio es el mismo: entre 80€ y 300€ según el nivel de seguridad. Lo
+              que
+              sí cambia es la recomendación: en puertas exteriores solemos aconsejar al menos seguridad media, por estar
+              más expuestas a intentos de manipulación.</p>
+          </details>
+
+          <!-- faq-item-8 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Qué precio tiene aproximadamente cambiar una cerradura o un bombín?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Como referencia rápida: cerradura básica 80€–120€, seguridad media 120€–180€, alta
+              seguridad 180€–300€, y sustitución en puerta blindada desde 200€. Siempre te damos el precio cerrado antes
+              de
+              empezar, sin sorpresas al final.</p>
+          </details>
+
+          <!-- faq-item-9 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>Si me han robado o perdido las llaves, ¿me conviene cambiar solo el bombín o toda la
+                cerradura?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Si el problema es una llave robada, perdida o rota, normalmente basta con cambiar
+              el
+              bombín: es más rápido, más económico, y te da la misma seguridad frente a ese problema en concreto.
+              Cambiar
+              toda la cerradura tiene sentido cuando quieres subir el nivel de seguridad general de la puerta o el
+              mecanismo completo está dañado.</p>
+          </details>
+
+          <!-- faq-item-10 -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>¿Qué incluye exactamente el precio de un cambio de cerradura?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Incluye el material completo (la cerradura o el bombín con su juego de llaves), la
+              mano de obra del técnico, el desplazamiento dentro de Sevilla Capital y garantía oficial del fabricante en
+              las piezas instaladas.</p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <!-- seccion-cta-final -->
+    <section id="contacto" class="seccion-cta-final">
+      <!-- contenido-cta-final -->
+      <div class="contenido-cta-final">
+
+        <!-- encabezado-cta-final -->
+        <div class="encabezado-cta-final">
+          <h2 class="h2-cta-final">Pide presupuesto para cambiar tu cerradura en Sevilla</h2>
+          <p class="texto-cta-final">Te decimos el precio exacto según el nivel de seguridad que necesites, antes de
+            instalar nada.</p>
+        </div>
+
+        <!-- acciones-cta-final -->
+        <div class="acciones-cta-final">
+          <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+            ahora</a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
+
+  <!-- ================= FOOTER ================= -->
+  <!-- pie-pagina -->
+  <footer class="pie-pagina">
+    <!-- contenido-pie-pagina -->
+    <div class="contenido-pie-pagina">
+
+      <!-- bloque-superior-pie -->
+      <div class="grid-pie-pagina">
+
+        <!-- columna-marca-pie -->
+        <div class="columna-pie-pagina columna-marca-pie">
+          <a href="index.html#inicio" class="enlace-logo-pie">
+            <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla"
+              class="logo-pie">
+          </a>
+          <p class="descripcion-pie-pagina">Cerrajero local en Sevilla especializado en urgencias 24 horas a domicilio.
+            Aperturas limpias sin daños, cambio de cerraduras de alta seguridad y precio cerrado antes de empezar.</p>
+          <div class="badge-tiempo-pie">
+            <i class="ri-time-line" aria-hidden="true"></i>
+            <span>Llegada estimada en <strong class="destacado">20–30 min</strong></span>
+          </div>
+        </div>
+
+        <!-- columna-navegacion-pie -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Navegación</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="index.html#inicio" class="enlace-pie">Inicio</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Servicios</a></li>
+            <li><a href="index.html#precios" class="enlace-pie">Tarifas y Precios</a></li>
+            <li><a href="index.html#cobertura" class="enlace-pie">Zona de cobertura</a></li>
+            <li><a href="index.html#sobre-nosotros" class="enlace-pie">¿Por qué elegirnos?</a></li>
+            <li><a href="index.html#faq" class="enlace-pie">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <!-- columna-servicios-pie -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Servicios 24H</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Apertura de puertas sin daños</a></li>
+            <li><a href="cambio-cerraduras.html" class="enlace-pie">Cambio de cerraduras</a></li>
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Puertas blindadas y acorazadas</a></li>
+            <li><a href="aperturas-coches.html" class="enlace-pie">Apertura de vehículos</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Asesoramiento de seguridad</a></li>
+          </ul>
+        </div>
+
+        <!-- columna-contacto-pie -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Contacto Urgente</h4>
+          <div class="bloque-contacto-pie">
+            <a href="tel:+34600000000" class="boton-contacto-pie boton-telefono-pie">
+              <i class="ri-phone-fill" aria-hidden="true"></i>
+              <span>Llamar ahora</span>
+            </a>
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer"
+              class="boton-contacto-pie boton-whatsapp-pie">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i>
+              <span>WhatsApp Directo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- barrita-inferior-pie -->
+      <div class="barrita-inferior-pie">
+        <div class="legales-pie">
+          <a href="aviso-legal.html" class="enlace-legal-pie">Aviso legal</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-privacidad.html" class="enlace-legal-pie">Política de privacidad</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-cookies.html" class="enlace-legal-pie">Política de cookies</a>
+        </div>
+        <p class="copyright-pie">© 2026 Apertura Express Sevilla. Todos los derechos reservados.</p>
+        <p class="creditos-pie">
+          Desarrollado por <a href="https://rubiqstudio.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="enlace-creditos-pie">RubiqStudio</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    Tawk_API.customStyle = {
+      visibility: {
+        desktop: {
+          position: 'br',
+          xOffset: 20,
+          yOffset: 95
+        },
+        mobile: {
+          position: 'br',
+          xOffset: 20,
+          yOffset: 95
+        }
+      }
+    };
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6a856d66d389c634455a8853/1k0cj6m57';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <!-- Botón Volver Arriba -->
+  <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba">
+    <i class="ri-key-line" aria-hidden="true"></i>
+  </a>
+
 </body>
+
 </html>

@@ -981,113 +981,7 @@
   color: var(--color-texto-parrafo);
 }
 
-/* =========================================
-   SECCIÓN 7 - PREGUNTAS FRECUENTES (FAQ)
-========================================= */
 
-/* Contenedor general de la sección FAQ */
-.seccion-faq {
-  width: 100%;
-  padding: 5% 6%;
-  position: relative;
-}
-
-/* Contenedor del contenido: encabezado + lista de preguntas centrada */
-.contenido-faq {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-  position: relative;
-  z-index: 1;
-}
-
-/* Contenedor del encabezado FAQ */
-.encabezado-faq {
-  text-align: center;
-}
-
-/* Encabezado principal de la sección FAQ con estilos generales del H2 */
-.h2-faq {
-  width: 80%;
-  margin: 0 auto;
-  font-size: var(--tamano-h2);
-  font-weight: 900;
-  line-height: 85%;
-  letter-spacing: -1.8px;
-  color: var(--color-primario);
-}
-
-/* Contenedor de las preguntas: 70% del ancho de pantalla */
-.lista-faq {
-  width: 70%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Cada tarjeta FAQ: fondo #F5F3F6, borde 2px color Accent, radio 20px */
-.faq-item {
-  width: 100%;
-  background-color: var(--color-fondo-cards);
-  border: 1px solid var(--color-accent);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-/* Sombra suave en hover */
-.faq-item:hover {
-  box-shadow: 0 8px 25px rgba(240, 78, 35, 0.15);
-}
-
-/* Fila superior (Summary): pregunta en Inter, 18px, estilos similares a H2 + icono flecha a la derecha */
-.faq-pregunta {
-  padding: 24px 30px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  list-style: none;
-  font-family: var(--fuente-general);
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 85%;
-  letter-spacing: -0.8px;
-  color: var(--color-primario);
-  user-select: none;
-}
-
-/* Ocultar la flecha nativa del navegador en <details> */
-.faq-pregunta::-webkit-details-marker {
-  display: none;
-}
-
-/* Icono de flecha a la derecha en color Accent */
-.faq-pregunta i {
-  font-size: 24px;
-  color: var(--color-accent);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-  margin-left: 16px;
-}
-
-/* Rotación del icono cuando la tarjeta está abierta */
-.faq-item[open] .faq-pregunta i {
-  transform: rotate(180deg);
-}
-
-/* Fila inferior: respuesta con los mismos estilos generales del párrafo */
-.faq-respuesta {
-  padding: 0 30px 24px 30px;
-  font-size: var(--tamano-texto-normal);
-  color: var(--color-texto-parrafo);
-  line-height: 1.6;
-}
 
 /* =========================================
    SECCIÓN 8 - SECCIÓN FINAL CTA
@@ -1559,26 +1453,7 @@
     gap: 16px;
   }
 
-  /* SECCIÓN 7 (FAQ) MÓVIL - tarjetas adaptadas a ancho completo */
-  .h2-faq {
-    font-size: clamp(2.5rem, 8vw, 3.2rem);
-    line-height: 85%;
-  }
 
-  .lista-faq {
-    width: 100%;
-    gap: 16px;
-  }
-
-  .faq-pregunta {
-    padding: 20px 20px;
-    font-size: 16px;
-  }
-
-  .faq-respuesta {
-    padding: 0 20px 20px 20px;
-    font-size: 0.95rem;
-  }
 
   /* SECCIÓN 8 (CTA FINAL) MÓVIL */
   .contenido-cta-final {
