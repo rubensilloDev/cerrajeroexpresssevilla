@@ -197,6 +197,7 @@ p {
 .boton-secundario,
 .boton-terciario,
 .boton-principal-azul {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -833,6 +834,15 @@ p {
 ========================================= */
 
 @media (max-width: 768px) {
+  :root {
+    --tamano-h1: 3.5rem;
+    --tamano-h2: 2.5rem;
+    --tamano-h3: 1.75rem;
+    --tamano-h4: 24px;
+    --tamano-texto-normal: 14px;
+    --tamano-texto-grande: 17px;
+  }
+
   .cabecera {
     width: 90%;
     margin: 12px auto 0;
@@ -1004,6 +1014,7 @@ p {
 
   /* COMPONENTE FAQ MÓVIL */
   .h2-faq {
+    width: 100%;
     font-size: clamp(2.5rem, 8vw, 3.2rem);
     line-height: 85%;
   }
