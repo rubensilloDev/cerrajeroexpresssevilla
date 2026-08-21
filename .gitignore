@@ -7,9 +7,10 @@
 # Permitir que Git explore carpetas
 !*/
 
-# Archivos HTML y CSS
+# Archivos HTML, CSS y JS
 !*.html
 !*.css
+!*.js
 
 # Carpetas img y fonts con todo su contenido
 !img/
