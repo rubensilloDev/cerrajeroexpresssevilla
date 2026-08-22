@@ -807,22 +807,13 @@
 
   /* Primer div: centrado en móvil */
   .hero-primer-div {
-    align-self: center;
     width: 100%;
-    text-align: center;
     gap: 24px;
-  }
-
-  /* Contenedor de botones alineado al centro */
-  .acciones-hero {
-    justify-content: center;
   }
 
   /* Segundo div: centrado en móvil */
   .hero-segundo-div {
-    align-self: center;
     width: 100%;
-    text-align: center;
   }
 
   /* Párrafo descriptivo centrado */
@@ -983,7 +974,7 @@
   .decoracion-cta {
     width: 70px;
     height: 70px;
-    font-size: 38px;
+    font-size: 85px;
   }
 
   .decoracion-llave {

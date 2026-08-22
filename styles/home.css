@@ -1303,13 +1303,21 @@
   .servicio-item,
   .servicio-item-invertido {
     flex-direction: column;
-    top: 10px;
+    padding: 20px 16px;
+    gap: 2rem;
+    top: 90px;
   }
 
-  .imagen-servicio,
+  .imagen-servicio {
+    width: 100%;
+    height: clamp(200px, 25vw, 250px);
+    flex: none;
+  }
+
   .contenido-servicio {
     width: 100%;
     flex: none;
+    gap: 12px;
   }
 
   .texto-servicios {
@@ -1317,11 +1325,14 @@
   }
 
   .h3-servicio {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    letter-spacing: -1px;
   }
 
   .acciones-servicio {
     flex-wrap: wrap;
+    gap: 12px;
+    padding: 5px 0;
   }
 
   /* SECCIÓN 4 (PRECIOS) MÓVIL - cabecera y botones adaptados */

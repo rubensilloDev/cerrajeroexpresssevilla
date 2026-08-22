@@ -469,9 +469,11 @@ p {
   vertical-align: middle;
 }
 
-.item-menu-desplegable:hover .icono-desplegable {
-  transform: rotate(180deg);
-  color: var(--color-accent);
+@media (min-width: 769px) {
+  .item-menu-desplegable:hover .icono-desplegable {
+    transform: rotate(180deg);
+    color: var(--color-accent);
+  }
 }
 
 .submenu-servicios {
@@ -503,10 +505,12 @@ p {
   height: 12px;
 }
 
-.item-menu-desplegable:hover .submenu-servicios {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
+@media (min-width: 769px) {
+  .item-menu-desplegable:hover .submenu-servicios {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .item-submenu {

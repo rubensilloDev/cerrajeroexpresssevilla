@@ -1286,8 +1286,6 @@
 
   .hero-primer-div {
     width: 100%;
-    align-self: stretch;
-    text-align: center;
   }
 
   .h1-hero {
@@ -1297,9 +1295,6 @@
 
   .hero-segundo-div {
     width: 100%;
-    align-self: stretch;
-    text-align: center;
-    align-items: center;
   }
 
   .texto-hero {
@@ -1310,7 +1305,7 @@
 
   .acciones-hero {
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     align-items: center;
     gap: 12px;
   }
