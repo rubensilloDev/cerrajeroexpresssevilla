@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Error 404 - Página no encontrada | Apertura Express Sevilla</title>
+  <!-- Remix Icon: librería de iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Estilos generales de la web -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Estilos de la página de error 404 -->
+  <link rel="stylesheet" href="styles/error-404.css">
+  <!-- Estilos del widget de chat personalizado -->
+  <link rel="stylesheet" href="styles/chat-widget.css">
+  <!-- Script JS del menú responsive -->
+  <script src="main.js" defer></script>
+  <!-- Script JS del widget de chat personalizado -->
+  <script src="js/chat-widget.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
+  <header class="cabecera">
+    <nav class="navegacion">
+      <!-- Logo de la marca: imagen del logo con enlace al inicio -->
+      <a href="index.html#inicio" class="enlace-logo">
+        <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla" class="logo">
+      </a>
+
+      <!-- Botón menú hamburguesa con 3 divs para animación sutil -->
+      <button class="boton-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación">
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+      </button>
+      <ul class="menu-navegacion">
+        <!-- Logo dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-logo-movil">
+          <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" class="logo-menu-movil">
+        </li>
+
+        <li class="item-menu"><a href="index.html#inicio" class="enlace-menu">Inicio</a></li>
+
+        <!-- Ítem Servicios con desplegable de los 5 servicios principales -->
+        <li class="item-menu item-menu-desplegable">
+          <a href="index.html#servicios" class="enlace-menu">Servicios <i class="ri-arrow-down-s-line icono-desplegable"
+              aria-hidden="true"></i></a>
+          <ul class="submenu-servicios">
+            <li class="item-submenu"><a href="cerrajero-urgente.html" class="enlace-submenu">Cerrajero Urgente en
+                Sevilla</a></li>
+            <li class="item-submenu"><a href="cambio-cerraduras.html" class="enlace-submenu">Cambio de Cerraduras</a>
+            </li>
+            <li class="item-submenu"><a href="aperturas-coches.html" class="enlace-submenu">Aperturas de Coches</a></li>
+          </ul>
+        </li>
+
+        <li class="item-menu"><a href="index.html#sobre-nosotros" class="enlace-menu">Sobre Nosotros</a></li>
+        <li class="item-menu"><a href="index.html#contacto" class="enlace-menu">Contacto</a></li>
+
+        <!-- Botón CTA dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-cta-movil">
+          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line"
+              aria-hidden="true"></i> Llamar ahora</a>
+        </li>
+      </ul>
+      <a href="tel:+34600000000" class="boton-llamar-cabecera">Llamar ahora</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= SECCIÓN ERROR 404 ================= -->
+    <section class="seccion-error-404">
+      <!-- Destellos decorativos naranja de fondo (lado izquierdo y derecho) -->
+      <div class="destello-naranja" style="top: 10%; left: 10%; transform: translate(-50%, -50%);"></div>
+      <div class="destello-naranja" style="bottom: 10%; right: 10%; transform: translate(50%, 50%);"></div>
+
+      <!-- contenido-seccion-error-404 -->
+      <div class="contenido-seccion-error-404">
+        <div class="icono-error-contenedor">
+          <i class="ri-lock-unlock-fill"></i>
+        </div>
+        <h1 class="h1-error">404</h1>
+        <h2 class="h2-error">¡Ups! Parece que esta cerradura está atascada</h2>
+        <p class="texto-error">
+          La página que buscas no existe o ha sido movida. Pero no te preocupes, si lo que necesitas es abrir una puerta
+          o solucionar una urgencia de cerrajería, estamos disponibles las 24 horas en toda Sevilla.
+        </p>
+        <div class="acciones-error">
+          <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+            ahora</a>
+          <a href="index.html" class="boton-secundario">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="pie-pagina">
+    <div class="contenido-pie-pagina">
+
+      <!-- Bloque superior del footer: 4 columnas en flex -->
+      <div class="grid-pie-pagina">
+
+        <!-- Columna 1: Marca y descripción -->
+        <div class="columna-pie-pagina columna-marca-pie">
+          <a href="index.html#inicio" class="enlace-logo-pie">
+            <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla"
+              class="logo-pie">
+          </a>
+          <p class="descripcion-pie-pagina">Cerrajero local en Sevilla especializado en urgencias 24 horas a domicilio.
+            Aperturas limpias sin daños, cambio de cerraduras de alta seguridad y precio cerrado antes de empezar.</p>
+          <div class="badge-tiempo-pie">
+            <i class="ri-time-line" aria-hidden="true"></i>
+            <span>Llegada estimada en <strong class="destacado">20–30 min</strong></span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Navegación</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="index.html#inicio" class="enlace-pie">Inicio</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Servicios</a></li>
+            <li><a href="index.html#precios" class="enlace-pie">Tarifas y Precios</a></li>
+            <li><a href="index.html#cobertura" class="enlace-pie">Zona de cobertura</a></li>
+            <li><a href="index.html#sobre-nosotros" class="enlace-pie">¿Por qué elegirnos?</a></li>
+            <li><a href="index.html#faq" class="enlace-pie">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios principales -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Servicios 24H</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Apertura de puertas sin daños</a></li>
+            <li><a href="cambio-cerraduras.html" class="enlace-pie">Cambio de cerraduras</a></li>
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Puertas blindadas y acorazadas</a></li>
+            <li><a href="aperturas-coches.html" class="enlace-pie">Apertura de vehículos</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Asesoramiento de seguridad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto urgente -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Contacto Urgente</h4>
+          <div class="bloque-contacto-pie">
+            <!-- Reemplazar +34600000000 por el teléfono real -->
+            <a href="tel:+34600000000" class="boton-contacto-pie boton-telefono-pie">
+              <i class="ri-phone-fill" aria-hidden="true"></i>
+              <span>Llamar ahora</span>
+            </a>
+            <!-- Reemplazar por enlace de WhatsApp real -->
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer"
+              class="boton-contacto-pie boton-whatsapp-pie">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i>
+              <span>WhatsApp Directo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fila inferior del footer: Legales, Copyright y Créditos -->
+      <div class="barrita-inferior-pie">
+        <div class="legales-pie">
+          <a href="aviso-legal.html" class="enlace-legal-pie">Aviso legal</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-privacidad.html" class="enlace-legal-pie">Política de privacidad</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-cookies.html" class="enlace-legal-pie">Política de cookies</a>
+        </div>
+        <p class="copyright-pie">© 2026 Apertura Express Sevilla. Todos los derechos reservados.</p>
+        <p class="creditos-pie">
+          Desarrollado por <a href="https://rubiqstudio.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="enlace-creditos-pie">RubiqStudio</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  </footer>
+
+  <!-- Botón Volver Arriba -->
+  <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba">
+    <i class="ri-key-line" aria-hidden="true"></i>
+  </a>
+
+</body>
+
+</html>

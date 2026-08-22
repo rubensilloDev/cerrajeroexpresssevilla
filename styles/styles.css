@@ -21,7 +21,7 @@
 /* Peso regular (400) */
 @font-face {
   font-family: 'Expose';
-  src: url('./fonts/Expose-Regular.woff2') format('woff2');
+  src: url('../fonts/Expose-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 /* Peso medium (500) */
 @font-face {
   font-family: 'Expose';
-  src: url('./fonts/Expose-Medium.woff2') format('woff2');
+  src: url('../fonts/Expose-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -39,7 +39,7 @@
 /* Peso bold (700) */
 @font-face {
   font-family: 'Expose';
-  src: url('./fonts/Expose-Bold.woff2') format('woff2');
+  src: url('../fonts/Expose-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 /* Peso black (900) - utilizado por los encabezados H2 */
 @font-face {
   font-family: 'Expose';
-  src: url('./fonts/Expose-Black.woff2') format('woff2');
+  src: url('../fonts/Expose-Black.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -94,6 +94,7 @@
   --tamano-h3: 2rem;
   --tamano-h4: 32px;
   --tamano-texto-normal: 16px;
+  --tamano-texto-pequeno: 14px;
   --tamano-texto-grande: 18px;
 }
 
@@ -835,7 +836,7 @@ p {
 
 @media (max-width: 768px) {
   :root {
-    --tamano-h1: 3.5rem;
+    --tamano-h1: 3.2rem;
     --tamano-h2: 2.5rem;
     --tamano-h3: 1.75rem;
     --tamano-h4: 24px;

@@ -1,19 +1,686 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cerrajero Urgente 24 horas en Sevilla. Llegamos rápido para cualquier urgencia de cerrajería.">
-  <title>Cerrajero Urgente en Sevilla | Apertura Express</title>
+  <meta name="description"
+    content="Cerrajero urgente en Sevilla 24 horas: Llegamos en 20-30 minutos a cualquier zona. Aperturas sin daños, cambio de cerraduras y precio cerrado antes de empezar.">
+  <title>Cerrajero Urgente en Sevilla | ¡Llegamos en 20–30 Minutos!</title>
+  <!-- Remix Icon: librería de iconos -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Estilos generales de la web -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Estilos específicos de la página Cerrajero Urgente -->
+  <link rel="stylesheet" href="styles/cerrajero-urgente.css">
+  <!-- Estilos del widget de chat personalizado -->
+  <link rel="stylesheet" href="styles/chat-widget.css">
+  <!-- Script JS sencillo para el menú responsive -->
   <script src="main.js" defer></script>
+  <!-- Script JS del widget de chat personalizado -->
+  <script src="js/chat-widget.js" defer></script>
 </head>
+
 <body>
-  <main style="padding: 100px 20px; text-align: center; font-family: sans-serif;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Cerrajero Urgente en Sevilla</h1>
-    <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">Página en construcción. Estamos preparando este servicio para vos.</p>
-    <a href="index.html" class="boton-principal" style="text-decoration: none; padding: 12px 24px; border-radius: 6px; background-color: #0056b3; color: white; display: inline-block;">Volver al Inicio</a>
+
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
+  <header class="cabecera">
+    <nav class="navegacion">
+      <!-- Logo de la marca: imagen del logo con enlace al inicio -->
+      <a href="index.html#inicio" class="enlace-logo">
+        <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla" class="logo">
+      </a>
+
+      <!-- Botón menú hamburguesa con 3 divs para animación sutil -->
+      <button class="boton-hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación">
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+        <div class="linea-hamburguesa"></div>
+      </button>
+      <ul class="menu-navegacion">
+        <!-- Logo dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-logo-movil">
+          <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" class="logo-menu-movil">
+        </li>
+
+        <li class="item-menu"><a href="index.html#inicio" class="enlace-menu">Inicio</a></li>
+
+        <!-- Ítem Servicios con desplegable de los 5 servicios principales -->
+        <li class="item-menu item-menu-desplegable">
+          <a href="index.html#servicios" class="enlace-menu">Servicios <i class="ri-arrow-down-s-line icono-desplegable"
+              aria-hidden="true"></i></a>
+          <ul class="submenu-servicios">
+            <li class="item-submenu"><a href="cerrajero-urgente.html" class="enlace-submenu">Cerrajero Urgente en
+                Sevilla</a></li>
+            <li class="item-submenu"><a href="cambio-cerraduras.html" class="enlace-submenu">Cambio de Cerraduras</a>
+            </li>
+            <li class="item-submenu"><a href="aperturas-coches.html" class="enlace-submenu">Aperturas de Coches</a></li>
+          </ul>
+        </li>
+
+        <li class="item-menu"><a href="index.html#sobre-nosotros" class="enlace-menu">Sobre Nosotros</a></li>
+        <li class="item-menu"><a href="index.html#contacto" class="enlace-menu">Contacto</a></li>
+
+        <!-- Botón CTA dentro del menú a pantalla completa para versión móvil -->
+        <li class="item-menu-cta-movil">
+          <a href="tel:+34600000000" class="boton-principal boton-cta-menu-movil"><i class="ri-phone-line"
+              aria-hidden="true"></i> Llamar ahora</a>
+        </li>
+      </ul>
+      <a href="tel:+34600000000" class="boton-llamar-cabecera">Llamar ahora</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <!-- hero-section -->
+    <section id="inicio" class="hero">
+      <!-- capa-degradado-hero -->
+      <div class="capa-degradado-hero"></div>
+
+      <!-- contenido-hero -->
+      <div class="contenido-hero">
+        <!-- hero-primer-div -->
+        <div class="hero-primer-div">
+          <!-- encabezado-hero -->
+          <h1 class="h1-hero">Cerrajero Urgente en <span class="destacado">Sevilla</span> 24 Horas | Llegamos en <span
+              class="destacado">20–30 Minutos</span></h1>
+          <!-- div-botones-hero -->
+          <div class="acciones-hero">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" class="boton-secundario"><i
+                class="ri-whatsapp-line" aria-hidden="true"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- hero-segundo-div -->
+        <div class="hero-segundo-div">
+          <!-- bajada-hero -->
+          <p class="texto-hero">Puertas bloqueadas, llaves perdidas o cerraduras rotas. Estamos disponible ahora mismo
+            en toda Sevilla Capital.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SITUACIONES DE URGENCIA ================= -->
+    <!-- seccion-situaciones-urgencia -->
+    <section class="seccion-situaciones-urgencia">
+      <!-- contenido-seccion-situaciones-urgencia -->
+      <div class="contenido-seccion-situaciones-urgencia">
+        <!-- columna-izquierda-situaciones -->
+        <div class="introduccion-situaciones">
+          <!-- div-textos-situaciones -->
+          <div class="textos-situaciones">
+            <h2 class="titulo-situaciones-urgencia">Situaciones de urgencia que resolvemos en el momento</h2>
+            <p class="bajada-situaciones-urgencia">Actuamos como cerrajero de urgencia en cualquiera de estos casos, sin
+              necesidad de cita previa ni esperas largas.</p>
+          </div>
+          <!-- div-botonera-situaciones -->
+          <div class="acciones-situaciones">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+
+        <!-- columna-derecha-situaciones -->
+        <div class="tarjetas-scroll-stack">
+          <!-- tarjeta-situacion-item -->
+          <article class="situacion-item">
+            <!-- div-icono-tarjeta -->
+            <div class="icono-tarjeta">
+              <i class="ri-door-lock-line" aria-hidden="true"></i>
+            </div>
+            <!-- div-contenido-tarjeta -->
+            <div class="contenido-tarjeta">
+              <h3 class="titulo-tarjeta">Te has quedado fuera de casa o del trabajo</h3>
+              <p class="descripcion-tarjeta">La puerta se ha cerrado sola o la cerradura se ha bloqueado y no puedes
+                entrar. Vamos a tu dirección y te abrimos sin dañar la cerradura.</p>
+            </div>
+            <!-- div-boton-tarjeta -->
+            <div class="boton-tarjeta-contenedor">
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- tarjeta-situacion-item -->
+          <article class="situacion-item">
+            <!-- div-icono-tarjeta -->
+            <div class="icono-tarjeta">
+              <i class="ri-key-line" aria-hidden="true"></i>
+            </div>
+            <!-- div-contenido-tarjeta -->
+            <div class="contenido-tarjeta">
+              <h3 class="titulo-tarjeta">Has perdido las llaves o te las han robado</h3>
+              <p class="descripcion-tarjeta">Si no sabes dónde están tus llaves, abrimos la puerta y valoramos si
+                conviene cambiar también la cerradura para que quien las tenga no pueda usarlas.</p>
+            </div>
+            <!-- div-boton-tarjeta -->
+            <div class="boton-tarjeta-contenedor">
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- tarjeta-situacion-item -->
+          <article class="situacion-item">
+            <!-- div-icono-tarjeta -->
+            <div class="icono-tarjeta">
+              <i class="ri-tools-line" aria-hidden="true"></i>
+            </div>
+            <!-- div-contenido-tarjeta -->
+            <div class="contenido-tarjeta">
+              <h3 class="titulo-tarjeta">La cerradura está rota o bloqueada</h3>
+              <p class="descripcion-tarjeta">Bombines gastados, llaves partidas dentro del cilindro o mecanismos
+                encasquillados. Diagnosticamos el problema al llegar y aplicamos la solución que menos dañe la puerta.
+              </p>
+            </div>
+            <!-- div-boton-tarjeta -->
+            <div class="boton-tarjeta-contenedor">
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <!-- tarjeta-situacion-item -->
+          <article class="situacion-item">
+            <!-- div-icono-tarjeta -->
+            <div class="icono-tarjeta">
+              <i class="ri-lock-line" aria-hidden="true"></i>
+            </div>
+            <!-- div-contenido-tarjeta -->
+            <div class="contenido-tarjeta">
+              <h3 class="titulo-tarjeta">Las llaves se han quedado puestas por dentro</h3>
+              <p class="descripcion-tarjeta">Uno de los casos más habituales de cerrajería urgente: la llave está puesta
+                por dentro y no se puede sacar desde fuera. Tenemos herramienta específica para resolverlo sin romper
+                nada.</p>
+            </div>
+            <!-- div-boton-tarjeta -->
+            <div class="boton-tarjeta-contenedor">
+              <a href="tel:+34600000000" class="boton-caso-tarjeta">Contratar servicio <i class="ri-arrow-right-line"
+                  aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CÓMO FUNCIONA ================= -->
+    <!-- seccion-como-funciona -->
+    <section class="seccion-como-funciona">
+      <!-- destello decorativo naranja de fondo (lado izquierdo) -->
+      <div class="destello-naranja"></div>
+      <!-- contenido-seccion-como-funciona -->
+      <div class="contenido-seccion-como-funciona">
+        <!-- columna-izquierda-como-funciona -->
+        <div class="pasos-como-funciona">
+          <!-- paso-tarjeta-item -->
+          <article class="paso-item-fila">
+            <!-- div-numero-paso -->
+            <div class="paso-numero-contenedor">
+              <span class="paso-numero">1</span>
+            </div>
+            <!-- div-contenido-paso -->
+            <div class="paso-contenido">
+              <h3 class="titulo-paso-item">Llamas y confirmamos hora de llegada</h3>
+              <p class="descripcion-paso-item">Nos cuentas qué ha pasado y dónde estás. En la misma llamada te damos una
+                hora estimada de llegada y un precio aproximado.</p>
+            </div>
+          </article>
+
+          <!-- paso-tarjeta-item -->
+          <article class="paso-item-fila">
+            <!-- div-numero-paso -->
+            <div class="paso-numero-contenedor">
+              <span class="paso-numero">2</span>
+            </div>
+            <!-- div-contenido-paso -->
+            <div class="paso-contenido">
+              <h3 class="titulo-paso-item">Llegamos en 20-30 minutos con el equipo necesario</h3>
+              <p class="descripcion-paso-item">Nuestros técnicos se desplazan por Sevilla Capital y alrededores con las
+                herramientas adecuadas para tu tipo de cerradura, así no hay visitas en falso.</p>
+            </div>
+          </article>
+
+          <!-- paso-tarjeta-item -->
+          <article class="paso-item-fila">
+            <!-- div-numero-paso -->
+            <div class="paso-numero-contenedor">
+              <span class="paso-numero">3</span>
+            </div>
+            <!-- div-contenido-paso -->
+            <div class="paso-contenido">
+              <h3 class="titulo-paso-item">Diagnóstico y precio cerrado antes de actuar</h3>
+              <p class="descripcion-paso-item">El técnico revisa la cerradura al llegar y te confirma el precio final
+                antes de tocar nada. Si algo cambia respecto al presupuesto por teléfono, te lo decimos antes, no
+                después.</p>
+            </div>
+          </article>
+
+          <!-- paso-tarjeta-item -->
+          <article class="paso-item-fila">
+            <!-- div-numero-paso -->
+            <div class="paso-numero-contenedor">
+              <span class="paso-numero">4</span>
+            </div>
+            <!-- div-contenido-paso -->
+            <div class="paso-contenido">
+              <h3 class="titulo-paso-item">Abrimos sin destrozos siempre que sea posible</h3>
+              <p class="descripcion-paso-item">Priorizamos la apertura limpia en la mayoría de los casos. Solo forzamos
+                la cerradura cuando no queda otra opción, y siempre con tu conformidad previa.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- columna-derecha-como-funciona -->
+        <div class="introduccion-como-funciona">
+          <!-- div-textos-como-funciona -->
+          <div class="textos-como-funciona">
+            <h2 class="titulo-como-funciona">Así funciona nuestro servicio de cerrajero urgente en Sevilla</h2>
+            <p class="bajada-como-funciona">Seguimos un proceso rápido y transparente para que recuperes la tranquilidad
+              cuanto antes, sin sorpresas en la factura final.</p>
+          </div>
+          <!-- div-botonera-como-funciona -->
+          <div class="acciones-como-funciona">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DISPONIBILIDAD 24 HORAS ================= -->
+    <!-- seccion-disponibilidad -->
+    <section class="seccion-disponibilidad">
+      <!-- contenido-seccion-disponibilidad -->
+      <div class="contenido-seccion-disponibilidad">
+        <!-- columna-izquierda-disponibilidad -->
+        <div class="disponibilidad-columna-izq">
+          <h2 class="titulo-disponibilidad">Cerrajero urgente 24 horas, también festivos</h2>
+        </div>
+
+        <!-- columna-derecha-disponibilidad -->
+        <div class="disponibilidad-columna-der">
+          <!-- div-texto-disponibilidad -->
+          <div class="textos-disponibilidad">
+            <p class="descripcion-disponibilidad">Atendemos de día, de noche y en festivos. El recargo nocturno
+              (22:00–08:00) es de 20€ a 40€ sobre el precio base.</p>
+          </div>
+          <!-- div-botonera-disponibilidad -->
+          <div class="acciones-disponibilidad">
+            <a href="tel:+34600000000" class="boton-principal"><i class="ri-phone-line" aria-hidden="true"></i> Llamar
+              ahora</a>
+            <a href="#contacto" class="boton-secundario">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TARIFAS Y PRECIOS ================= -->
+    <!-- seccion-precios -->
+    <section class="seccion-precios">
+      <!-- contenido-precios -->
+      <div class="contenido-precios">
+
+        <!-- cabecera-precios (Div 1) -->
+        <div class="cabecera-precios-central">
+          <!-- Div 1.1: H2 centrado -->
+          <h2 class="h2-precios">Precio de una apertura urgente en Sevilla</h2>
+          <!-- Texto introductorio -->
+          <p class="texto-precios">Precios orientativos y transparentes para aperturas de urgencia en Sevilla. Te
+            confirmamos el precio cerrado antes de empezar a trabajar para que no tengas sorpresas.</p>
+        </div>
+
+        <!-- grid-tarjetas-precios (Div 2) -->
+        <div class="grid-precios">
+
+          <!-- tarjeta-precio-diurno -->
+          <article class="precio-item">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Apertura sin daños (diurno)</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">60€ – 90€</span>
+                <span class="subtexto-precio">HORARIO DIURNO</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Sin roturas ni destrozos en la cerradura</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Llegada en 20-30 minutos</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Precio cerrado antes de empezar</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Desplazamiento incluido en Sevilla Capital</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal-azul boton-precio">Llamar Ahora</a>
+          </article>
+
+          <!-- tarjeta-precio-noche-festivo (tarjeta destacada) -->
+          <article class="precio-item tarjeta-destacada">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Apertura sin daños (noche/festivo)</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">90€ – 130€</span>
+                <span class="subtexto-precio">HORARIO NOCTURNO / FESTIVO</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Atención 24 horas, también en festivos</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Misma técnica sin daños que en diurno</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Recargo nocturno ya incluido en el precio</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Llegada en 20-30 minutos</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal boton-precio">Llamar Ahora</a>
+          </article>
+
+          <!-- tarjeta-precio-rotura -->
+          <article class="precio-item">
+            <div class="cabecera-tarjeta-precio">
+              <h3 class="h3-precio">Apertura con rotura</h3>
+              <div class="bloque-precio">
+                <span class="precio-tarjeta">desde 120€</span>
+                <span class="subtexto-precio">ROTURA INEVITABLE</span>
+              </div>
+            </div>
+            <ul class="lista-precio">
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Solo cuando no hay otra alternativa posible</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Diagnóstico previo antes de forzar</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Precio confirmado antes de actuar</span>
+              </li>
+              <li class="fila-precio">
+                <i class="ri-check-line" aria-hidden="true"></i>
+                <span class="texto-fila-precio">Cambio de cerradura en la misma visita</span>
+              </li>
+            </ul>
+            <a href="tel:+34600000000" class="boton-principal-azul boton-precio">Llamar Ahora</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREGUNTAS FRECUENTES (FAQ) ================= -->
+    <!-- seccion-faq -->
+    <section class="seccion-faq">
+      <!-- contenido-seccion-faq -->
+      <div class="contenido-faq">
+        <!-- encabezado-faq -->
+        <div class="encabezado-faq">
+          <h2 class="titulo-faq">Preguntas frecuentes sobre el cerrajero urgente en Sevilla</h2>
+        </div>
+
+        <!-- lista-desplegables-faq -->
+        <div class="lista-faq">
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>1. ¿Hay cerrajeros urgentes disponibles ahora mismo en Sevilla?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí, atendemos urgencias las 24 horas del día, todos los días del año, en Sevilla
+              Capital y alrededores. Al llamar te confirmamos en la misma llamada la hora estimada de llegada, que suele
+              ser de 20 a 30 minutos.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>2. ¿Cuánto tarda un cerrajero de urgencia en llegar?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Nuestro tiempo medio de llegada es de 20 a 30 minutos desde que nos llamas, dentro
+              de Sevilla Capital. Nos desplazamos ya con el equipo adecuado para tu tipo de cerradura, para no tener que
+              hacer una segunda visita.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>3. ¿Hay cerrajeros 24 horas en Sevilla, también de madrugada?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí, trabajamos las 24 horas, incluida la madrugada y los festivos. El único cambio
+              en horario nocturno (de 22:00 a 08:00) es un recargo de entre 20€ y 40€ sobre el precio base del servicio,
+              algo habitual en el sector por la disponibilidad a esas horas.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>4. Se me ha quedado la llave puesta por dentro de la cerradura y no puedo entrar, ¿un cerrajero de
+                urgencia puede abrir sin romper nada?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí, es uno de los casos más habituales que resolvemos. Usamos herramientas
+              específicas para estos casos, y en la mayoría de las veces conseguimos abrir sin dañar la cerradura ni la
+              puerta.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>5. Es de madrugada y se me ha bloqueado la puerta de casa, ¿me sale más caro llamar a un cerrajero
+                de emergencia ahora que esperar a mañana?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">El recargo nocturno (22:00–08:00) es de 20€ a 40€ sobre el precio diurno, así que
+              sí hay una diferencia, pero no es desproporcionada. Una apertura sin daños de noche está entre 90€ y 130€,
+              frente a los 60€–90€ de día. Te damos el precio exacto por teléfono antes de que decidas.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>6. ¿Un cerrajero urgente en Sevilla puede venir un domingo o un día festivo?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí, atendemos festivos igual que cualquier otro día, sin necesidad de cita previa
+              ni esperas largas. Llamas, nos cuentas qué ha pasado y te confirmamos hora de llegada al momento.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>7. He perdido las llaves de casa y no sé si alguien las tiene, ¿el cerrajero de urgencia también me
+                aconseja si debo cambiar la cerradura?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Sí. Primero te abrimos la puerta, y después el técnico valora contigo si conviene
+              cambiar también la cerradura, sobre todo si existe la posibilidad de que alguien más tenga acceso a esas
+              llaves. La decisión final siempre es tuya, sin presión.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>8. ¿Cuánto cobra un cerrajero urgente por una apertura de puerta?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Una apertura sin daños en horario diurno va de 60€ a 90€, y en horario nocturno o
+              festivo de 90€ a 130€. Si la cerradura está muy dañada y hay que forzarla, el precio parte de 120€.
+              Siempre te confirmamos el precio cerrado antes de actuar.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>9. ¿Necesito pedir cita previa para un cerrajero de urgencia o vienen el mismo día?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">No hace falta cita previa. Nos llamas, nos das tu dirección y qué ha pasado, y en
+              la misma llamada coordinamos la llegada del técnico, normalmente en 20-30 minutos.</p>
+          </details>
+
+          <!-- item-pregunta-faq -->
+          <details class="faq-item">
+            <summary class="faq-pregunta">
+              <span>10. ¿Cómo sé si estoy contratando un cerrajero urgente de confianza y no me van a cobrar de más por
+                la emergencia?</span>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </summary>
+            <p class="faq-respuesta">Te damos un precio aproximado por teléfono y, al llegar, el técnico hace un
+              diagnóstico y te confirma el precio final antes de tocar nada. Si algo cambia respecto a lo hablado por
+              teléfono, te lo decimos antes de trabajar, no después. Así sabes exactamente lo que vas a pagar desde el
+              principio.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <!-- seccion-cta-final -->
+    <section class="seccion-cta-final">
+      <!-- Icono decorativo flotante 1: Llave (Esquina superior izquierda) -->
+      <div class="decoracion-cta decoracion-llave">
+        <i class="ri-key-2-fill" aria-hidden="true"></i>
+      </div>
+
+      <!-- contenido-seccion-cta-final -->
+      <div class="contenido-seccion-cta-final">
+        <!-- textos-cta-final -->
+        <div class="textos-cta-final">
+          <h2 class="titulo-cta-final">Cerrajero urgente disponible ahora en Sevilla</h2>
+          <p class="descripcion-cta-final">Llama ahora y confirmamos hora de llegada al momento. Presupuesto sin compromiso.</p>
+        </div>
+        <!-- botonera-cta-final -->
+        <div class="cta-final-acciones">
+          <a href="tel:+34600000000" class="boton-principal-azul"><i class="ri-phone-line" aria-hidden="true"></i> Llamar ahora</a>
+        </div>
+      </div>
+
+      <!-- Icono decorativo flotante 2: Teléfono (Esquina inferior derecha) -->
+      <div class="decoracion-cta decoracion-telefono">
+        <i class="ri-phone-fill" aria-hidden="true"></i>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="pie-pagina">
+    <div class="contenido-pie-pagina">
+
+      <!-- Bloque superior del footer: 4 columnas en flex -->
+      <div class="grid-pie-pagina">
+
+        <!-- Columna 1: Marca y descripción -->
+        <div class="columna-pie-pagina columna-marca-pie">
+          <a href="index.html#inicio" class="enlace-logo-pie">
+            <img src="img/logo.png" alt="Logo de Apertura Express Sevilla" title="Apertura Express Sevilla"
+              class="logo-pie">
+          </a>
+          <p class="descripcion-pie-pagina">Cerrajero local en Sevilla especializado en urgencias 24 horas a domicilio.
+            Aperturas limpias sin daños, cambio de cerraduras de alta seguridad y precio cerrado antes de empezar.</p>
+          <div class="badge-tiempo-pie">
+            <i class="ri-time-line" aria-hidden="true"></i>
+            <span>Llegada estimada en <strong class="destacado">20–30 min</strong></span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación principal -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Navegación</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="index.html#inicio" class="enlace-pie">Inicio</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Servicios</a></li>
+            <li><a href="index.html#precios" class="enlace-pie">Tarifas y Precios</a></li>
+            <li><a href="index.html#cobertura" class="enlace-pie">Zona de cobertura</a></li>
+            <li><a href="index.html#sobre-nosotros" class="enlace-pie">¿Por qué elegirnos?</a></li>
+            <li><a href="index.html#faq" class="enlace-pie">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios principales -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Servicios 24H</h4>
+          <ul class="lista-enlaces-pie">
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Apertura de puertas sin daños</a></li>
+            <li><a href="cambio-cerraduras.html" class="enlace-pie">Cambio de cerraduras</a></li>
+            <li><a href="cerrajero-urgente.html" class="enlace-pie">Puertas blindadas y acorazadas</a></li>
+            <li><a href="aperturas-coches.html" class="enlace-pie">Apertura de vehículos</a></li>
+            <li><a href="index.html#servicios" class="enlace-pie">Asesoramiento de seguridad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto urgente -->
+        <div class="columna-pie-pagina">
+          <h4 class="titulo-columna-pie">Contacto Urgente</h4>
+          <div class="bloque-contacto-pie">
+            <!-- Reemplazar +34600000000 por el teléfono real -->
+            <a href="tel:+34600000000" class="boton-contacto-pie boton-telefono-pie">
+              <i class="ri-phone-fill" aria-hidden="true"></i>
+              <span>Llamar ahora</span>
+            </a>
+            <!-- Reemplazar por enlace de WhatsApp real -->
+            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer"
+              class="boton-contacto-pie boton-whatsapp-pie">
+              <i class="ri-whatsapp-line" aria-hidden="true"></i>
+              <span>WhatsApp Directo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Fila inferior del footer: Legales, Copyright y Créditos -->
+      <div class="barrita-inferior-pie">
+        <div class="legales-pie">
+          <a href="aviso-legal.html" class="enlace-legal-pie">Aviso legal</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-privacidad.html" class="enlace-legal-pie">Política de privacidad</a>
+          <span class="separador-pie">•</span>
+          <a href="politica-cookies.html" class="enlace-legal-pie">Política de cookies</a>
+        </div>
+        <p class="copyright-pie">© 2026 Apertura Express Sevilla. Todos los derechos reservados.</p>
+        <p class="creditos-pie">
+          Desarrollado por <a href="https://rubiqstudio.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="enlace-creditos-pie">RubiqStudio</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- Botón Volver Arriba -->
+  <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba">
+    <i class="ri-key-line" aria-hidden="true"></i>
+  </a>
+
 </body>
+
 </html>

@@ -12,7 +12,7 @@
   width: 100%;
   margin: 0 auto;
   padding: clamp(120px, 14vw, 180px) 10% 10%;
-  background-image: url('img/img-cerrajero .jpeg');
+  background-image: url('../img/img-cerrajero .jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,8 +79,9 @@
 /* Párrafo descriptivo en color normal text */
 .texto-hero {
   font-size: var(--tamano-texto-grande);
-  color: gainsboro;
-  font-weight: bold;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
   line-height: 1.5;
   max-width: 90%;
 }
@@ -99,6 +100,20 @@
 .acciones-hero .boton-secundario {
   padding: 15px 30px;
   font-size: var(--tamano-texto-normal);
+}
+
+/* Botón secundario del hero con fondo blanco */
+.acciones-hero .boton-secundario {
+  background-color: #FFFFFF;
+  color: var(--color-primario);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.acciones-hero .boton-secundario:hover {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
 }
 
 

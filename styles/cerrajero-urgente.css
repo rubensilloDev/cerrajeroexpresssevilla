@@ -1,0 +1,998 @@
+/* =========================================
+   ESTILOS DE LA PÁGINA CERRAJERO URGENTE
+========================================= */
+
+/* =========================================
+   HERO - SECCIÓN PRINCIPAL
+========================================= */
+
+/* Contenedor general del hero: imagen de fondo y posición relativa */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(120px, 14vw, 180px) 10% 10%;
+  background-image: url('../img/Locksmith_changing_a_lock_202608071723.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Capa superpuesta con degradado de Accent (naranja) a Blanco */
+.capa-degradado-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(240, 78, 35, 0.85) 0%, transparent 20%, transparent 60%, rgba(255, 255, 255, 0.98) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Contenedor del contenido del hero: dos divs en columna */
+.contenido-hero {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Primer div: alineado a la izquierda, contiene título y botones */
+.hero-primer-div {
+  align-self: flex-start;
+  width: 85%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Encabezado principal H1 en color blanco con sombra protectora */
+.h1-hero {
+  font-size: var(--tamano-h1);
+  color: #FFFFFF;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -2px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+/* Palabra o término destacado en color Accent */
+.h1-hero .destacado {
+  color: var(--color-accent);
+}
+
+/* Contenedor de botones alineado a la izquierda bajo el H1 */
+.acciones-hero {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Ajustes finos de los botones del hero */
+.acciones-hero .boton-principal,
+.acciones-hero .boton-secundario {
+  padding: 15px 30px;
+}
+
+/* Botón secundario del hero con fondo blanco */
+.acciones-hero .boton-secundario {
+  background-color: #FFFFFF;
+  color: var(--color-primario);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.acciones-hero .boton-secundario:hover {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+
+/* Segundo div: situado debajo y alineado a la derecha, contiene la bajada */
+.hero-segundo-div {
+  align-self: flex-end;
+  width: 55%;
+  text-align: right;
+}
+
+/* Párrafo descriptivo de bajada en color normal text */
+.texto-hero {
+  font-size: var(--tamano-texto-grande);
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-left: auto;
+  max-width: 90%;
+}
+
+/* =========================================
+   SITUACIONES DE URGENCIA - SEGUNDA SECCIÓN
+========================================= */
+
+/* Contenedor general de la sección */
+.seccion-situaciones-urgencia {
+  width: 100%;
+  padding: 6% 10%;
+}
+
+/* Grid principal de dos columnas */
+.contenido-seccion-situaciones-urgencia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda fija/sticky al hacer scroll */
+.introduccion-situaciones {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Estilos de los textos de la columna izquierda */
+.textos-situaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titulo-situaciones-urgencia {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.bajada-situaciones-urgencia {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+}
+
+/* Botonera de la columna izquierda */
+.acciones-situaciones {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Columna derecha: contenedor de tarjetas apilables */
+.tarjetas-scroll-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Componente Tarjeta: posicionamiento sticky para apilamiento */
+.situacion-item {
+  position: sticky;
+  top: 140px;
+  background-color: white;
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, z-index 0s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Al hacer hover se endereza, se agranda un poquito y se trae al frente */
+.situacion-item:hover {
+  box-shadow: 0 10px 30px rgba(240, 78, 35, 0.12);
+  transform: rotate(0deg) scale(1.02);
+  z-index: 100;
+}
+
+/* Incremento dinámico de z-index y rotación individual (baraja desordenada) */
+.situacion-item:nth-child(1) {
+  z-index: 10;
+  transform: rotate(-2deg);
+}
+
+.situacion-item:nth-child(2) {
+  z-index: 20;
+  transform: rotate(1.5deg);
+}
+
+.situacion-item:nth-child(3) {
+  z-index: 30;
+  transform: rotate(-1deg);
+}
+
+.situacion-item:nth-child(4) {
+  z-index: 40;
+  transform: rotate(2deg);
+}
+
+/* Div Icono de la tarjeta */
+.icono-tarjeta i {
+  font-size: 32px;
+  color: var(--color-accent);
+  background-color: rgba(240, 78, 35, 0.08);
+  padding: 12px;
+  border-radius: 8px;
+  display: inline-flex;
+}
+
+/* Div Contenido: Encabezado y párrafo */
+.contenido-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.titulo-tarjeta {
+  font-family: var(--fuente-encabezados);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 90%;
+  letter-spacing: -1px;
+  color: var(--color-primario);
+}
+
+.descripcion-tarjeta {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.5;
+}
+
+/* Div Botón: Botón contratar servicio idéntico al de cambio-cerraduras */
+.boton-tarjeta-contenedor {
+  margin-top: auto;
+  width: 100%;
+}
+
+.boton-caso-tarjeta {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid var(--color-accent);
+  border-radius: 16px;
+  background: transparent;
+  color: var(--color-accent);
+  font-family: var(--fuente-general);
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-caso-tarjeta:hover {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.boton-caso-tarjeta i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.boton-caso-tarjeta:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   CÓMO FUNCIONA - TERCERA SECCIÓN
+========================================= */
+
+/* Contenedor general de la sección */
+.seccion-como-funciona {
+  position: relative;
+  width: 100%;
+  padding: 6% 10%;
+}
+
+/* Posicionamiento del destello naranja */
+.seccion-como-funciona .destello-naranja {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+/* Grid principal de dos columnas */
+.contenido-seccion-como-funciona {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 5rem;
+  align-items: start;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda: listado de tarjetas en columna */
+.pasos-como-funciona {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Componente Tarjeta Fila (Horizontal) */
+.paso-item-fila {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-accent-suave);
+  border-radius: 12px;
+  padding: 24px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.paso-item-fila:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(240, 78, 35, 0.08);
+}
+
+/* Div 1: Círculo del número del paso */
+.paso-numero-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(240, 78, 35, 0.3);
+}
+
+.paso-numero {
+  color: #FFFFFF;
+  font-family: var(--fuente-encabezados);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Div 2: Contenido del paso */
+.paso-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paso-contenido .titulo-paso-item {
+  font-family: var(--fuente-encabezados);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 90%;
+  letter-spacing: -1px;
+  color: var(--color-primario);
+}
+
+.paso-contenido .descripcion-paso-item {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.5;
+}
+
+/* Columna derecha: información y CTA sticky */
+.introduccion-como-funciona {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* Textos informativos de la columna derecha */
+.textos-como-funciona {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titulo-como-funciona {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.bajada-como-funciona {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+}
+
+/* Botonera de la columna derecha */
+.acciones-como-funciona {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   DISPONIBILIDAD - CUARTA SECCIÓN (BANNER DESTACADO CON GRADIENTE)
+========================================= */
+
+/* Contenedor general de la sección con fondo gradiente lineal diagonal */
+.seccion-disponibilidad {
+  width: 100%;
+  padding: 5% 10%;
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+}
+
+/* Grid principal de dos columnas */
+.contenido-seccion-disponibilidad {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Columna izquierda: H2 global en blanco */
+.disponibilidad-columna-izq {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-disponibilidad {
+  font-size: var(--tamano-h2);
+  color: #FFFFFF;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+/* Columna derecha: textos y botones alineados a la derecha */
+.disponibilidad-columna-der {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* Textos de la sección */
+.textos-disponibilidad {
+  width: 100%;
+}
+
+.descripcion-disponibilidad {
+  font-size: var(--tamano-texto-normal);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Botonera de la sección */
+.acciones-disponibilidad {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Botón secundario con contraste óptimo para fondo oscuro */
+.acciones-disponibilidad .boton-secundario {
+  color: #FFFFFF;
+  background-color: transparent;
+  border-color: var(--color-accent);
+}
+
+
+
+/* =========================================
+   TARIFAS Y PRECIOS - QUINTA SECCIÓN
+========================================= */
+
+.seccion-precios {
+  width: 100%;
+  padding: 6% 10%;
+  background-color: var(--color-fondo);
+}
+
+.contenido-precios {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Div 1 - Cabecera de Sección */
+.cabecera-precios-central {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.h2-precios {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+}
+
+.texto-precios {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+/* Div 2 - Grid de Precios */
+.grid-precios {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 3%;
+}
+
+/* Tarjeta de precio estándar */
+.precio-item {
+  width: calc((100% - 6%) / 3);
+  min-height: 450px;
+  padding: 3% 2.5%;
+  background-color: var(--color-fondo-cards);
+  border: 1px solid #C4C6CE;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.precio-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.1);
+}
+
+/* Tarjeta destacada */
+.precio-item.tarjeta-destacada {
+  background-color: rgba(240, 78, 35, 0.15);
+  border: 2px solid var(--color-accent-hover);
+  box-shadow: 0 12px 35px rgba(240, 78, 35, 0.35);
+  transform: scale(1.08);
+}
+
+.precio-item.tarjeta-destacada:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(240, 78, 35, 0.45);
+}
+
+.cabecera-tarjeta-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Fila 1 - Nombre del servicio */
+.h3-precio {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1px;
+  color: var(--color-primario);
+}
+
+/* Fila 2 - Bloque de precio */
+.bloque-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.precio-tarjeta {
+  font-family: var(--fuente-encabezados);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  color: var(--color-primario);
+}
+
+.subtexto-precio {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-texto-parrafo);
+}
+
+/* Fila 3 - Lista de características */
+.lista-precio {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fila-precio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--tamano-texto-pequeno);
+  line-height: 1.4;
+  color: var(--color-texto-parrafo);
+}
+
+.fila-precio i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.texto-fila-precio {
+  text-align: left;
+}
+
+/* Fila 4 - Botón de acción */
+.boton-precio {
+  align-self: center;
+  width: fit-content;
+  justify-content: center;
+}
+
+/* =========================================
+   CTA FINAL - SÉPTIMA SECCIÓN
+========================================= */
+
+.seccion-cta-final {
+  position: relative;
+  width: 100%;
+  margin: 6% 0;
+  padding: 6% 10%;
+  background: var(--color-accent);
+  box-shadow: 0 -15px 35px rgba(240, 78, 35, 0.15), 0 15px 35px rgba(240, 78, 35, 0.75);
+  overflow: visible;
+}
+
+.contenido-seccion-cta-final {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.textos-cta-final {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.titulo-cta-final {
+  font-size: var(--tamano-h2);
+  color: var(--color-primario);
+  font-weight: 900;
+  line-height: 85%;
+  letter-spacing: -1.8px;
+  margin: 0;
+}
+
+.descripcion-cta-final {
+  font-size: var(--tamano-texto-normal);
+  color: var(--color-texto-parrafo);
+  line-height: 1.6;
+  max-width: 60%;
+  margin: 0;
+}
+
+.cta-final-acciones {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Iconos decorativos flotantes 3D */
+.decoracion-cta {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primario);
+  font-size: 150px;
+  width: 120px;
+  height: 120px;
+  z-index: 5;
+  transition: transform 0.3s ease;
+  text-shadow: 0 15px 25px rgba(240, 78, 35, 0.6);
+}
+
+/* Posición y animaciones decorativas */
+.decoracion-llave {
+  top: -40px;
+  left: 7%;
+  animation: floatDecorKey 5s ease-in-out infinite;
+}
+
+.decoracion-telefono {
+  bottom: -40px;
+  right: 7%;
+  animation: floatDecorPhone 5s ease-in-out infinite;
+}
+
+@keyframes floatDecorKey {
+  0% {
+    transform: translateY(0) rotate(-15deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-10deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+}
+
+@keyframes floatDecorPhone {
+  0% {
+    transform: translateY(0) rotate(15deg);
+  }
+
+  50% {
+    transform: translateY(8px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(15deg);
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MÓVIL
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* Contenedor del contenido del hero: centrado en columna */
+  .contenido-hero {
+    gap: 2rem;
+  }
+
+  /* Primer div: centrado en móvil */
+  .hero-primer-div {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    gap: 24px;
+  }
+
+  /* Contenedor de botones alineado al centro */
+  .acciones-hero {
+    justify-content: center;
+  }
+
+  /* Segundo div: centrado en móvil */
+  .hero-segundo-div {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Párrafo descriptivo centrado */
+  .texto-hero {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* RESPONSIVE - SITUACIONES DE URGENCIA */
+  .seccion-situaciones-urgencia {
+    padding: 10% 6%;
+  }
+
+  .contenido-seccion-situaciones-urgencia {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .introduccion-situaciones {
+    position: static;
+    text-align: center;
+    align-items: center;
+  }
+
+  .acciones-situaciones {
+    justify-content: center;
+  }
+
+  .tarjetas-scroll-stack {
+    gap: 24px;
+  }
+
+  .situacion-item {
+    position: sticky;
+    top: 110px;
+    /* Se apila debajo de la cabecera fija de móvil */
+    width: 100%;
+    padding: 30px 24px;
+  }
+
+  /* RESPONSIVE - CÓMO FUNCIONA */
+  .seccion-como-funciona {
+    padding: 10% 6%;
+  }
+
+  .contenido-seccion-como-funciona {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* Mostrar la introducción antes de los pasos en móviles */
+  .introduccion-como-funciona {
+    position: static;
+    order: -1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .acciones-como-funciona {
+    justify-content: center;
+  }
+
+  .pasos-como-funciona {
+    gap: 20px;
+  }
+
+  .paso-item-fila {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  /* RESPONSIVE - DISPONIBILIDAD */
+  .seccion-disponibilidad {
+    padding: 10% 6%;
+  }
+
+  .contenido-seccion-disponibilidad {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .disponibilidad-columna-izq {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .disponibilidad-columna-der {
+    text-align: center;
+    align-items: center;
+  }
+
+  .acciones-disponibilidad {
+    justify-content: center;
+  }
+
+  /* RESPONSIVE - PRECIOS */
+  .seccion-precios {
+    padding: 10% 6%;
+  }
+
+  .contenido-precios {
+    gap: 3rem;
+  }
+
+  .cabecera-precios-central {
+    gap: 1.5rem;
+  }
+
+  .texto-precios {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .boton-cabecera-precios {
+    width: 100%;
+  }
+
+  .boton-cabecera-precios .boton-principal {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .grid-precios {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .precio-item {
+    width: 100%;
+    padding: 30px 24px;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .precio-item.tarjeta-destacada {
+    transform: none;
+  }
+
+  .precio-item.tarjeta-destacada:hover {
+    transform: scale(1.02);
+  }
+
+  /* RESPONSIVE - CTA FINAL */
+  .seccion-cta-final {
+    padding: 12% 6%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .descripcion-cta-final {
+    max-width: 100%;
+  }
+
+  .decoracion-cta {
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+  }
+
+  .decoracion-llave {
+    top: -20px;
+    left: 4%;
+  }
+
+  .decoracion-telefono {
+    bottom: -20px;
+    right: 4%;
+  }
+}

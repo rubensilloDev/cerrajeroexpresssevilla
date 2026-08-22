@@ -12,11 +12,15 @@
   <!-- Remix Icon: librería de iconos -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Estilos generales de la web -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <!-- Estilos específicos de la página Cambio de Cerraduras -->
-  <link rel="stylesheet" href="cambio-cerraduras.css">
+  <link rel="stylesheet" href="styles/cambio-cerraduras.css">
+  <!-- Estilos del widget de chat personalizado -->
+  <link rel="stylesheet" href="styles/chat-widget.css">
   <!-- Script JS sencillo para el menú responsive -->
   <script src="main.js" defer></script>
+  <!-- Script JS del widget de chat personalizado -->
+  <script src="js/chat-widget.js" defer></script>
 </head>
 
 <body>
@@ -646,7 +650,8 @@
                   <option value="+57">🇨🇴 +57 (CO)</option>
                   <option value="+56">🇨🇱 +56 (CL)</option>
                 </select>
-                <input type="tel" id="telefono-cta" name="telefono" class="input-cta input-telefono-con-prefijo" placeholder="600 000 000" required>
+                <input type="tel" id="telefono-cta" name="telefono" class="input-cta input-telefono-con-prefijo"
+                  placeholder="600 000 000" required>
               </div>
             </div>
 
@@ -772,33 +777,7 @@
     </div>
   </footer>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    Tawk_API.customStyle = {
-      visibility: {
-        desktop: {
-          position: 'br',
-          xOffset: 20,
-          yOffset: 95
-        },
-        mobile: {
-          position: 'br',
-          xOffset: 20,
-          yOffset: 95
-        }
-      }
-    };
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/6a856d66d389c634455a8853/1k0cj6m57';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
+
 
   <!-- Botón Volver Arriba -->
   <a href="#inicio" class="boton-volver-arriba" aria-label="Volver arriba">
